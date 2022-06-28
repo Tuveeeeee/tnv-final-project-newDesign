@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../../assets/images/login-screen.jpg');
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 5px lightgray;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.container section {
+    margin-top: 64px;
+    margin-bottom: 32px;
+}
+
+
+header h1 {
+    color: white;
+    font-size: 128px;
+    margin: 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+header p {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px black;
+}
