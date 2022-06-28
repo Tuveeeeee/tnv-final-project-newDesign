@@ -18,6 +18,7 @@ const routes: Routes = [
       { path: "welcome", component: WelcomeComponent },
       { path: "profile", component: ProfileComponent },
       { path: "rankings", component: RankingsComponent },
+      { path: "register", component: RegisterComponent },
       { path: "", redirectTo: "welcome", pathMatch: 'full' },
     ],
   },
