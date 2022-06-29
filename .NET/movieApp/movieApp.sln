@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{85558385-9042-49F1-8181-AF11EBAA0577}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "movieApp.Core", "src\movieApp.Core\movieApp.Core.csproj", "{3C2FAB36-0D33-4253-99CD-10E17076E2AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "movieApp.RestAPI", "src\movieApp.RestAPI\movieApp.RestAPI.csproj", "{3E79D206-68B6-4703-AB0D-3253684D5A71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "movieApp.Ef", "src\movieApp.Ef\movieApp.Ef.csproj", "{45C44A12-33F0-41D8-8739-BFDE6A4CDD50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C2FAB36-0D33-4253-99CD-10E17076E2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2FAB36-0D33-4253-99CD-10E17076E2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2FAB36-0D33-4253-99CD-10E17076E2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2FAB36-0D33-4253-99CD-10E17076E2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E79D206-68B6-4703-AB0D-3253684D5A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E79D206-68B6-4703-AB0D-3253684D5A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E79D206-68B6-4703-AB0D-3253684D5A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E79D206-68B6-4703-AB0D-3253684D5A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C44A12-33F0-41D8-8739-BFDE6A4CDD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C44A12-33F0-41D8-8739-BFDE6A4CDD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C44A12-33F0-41D8-8739-BFDE6A4CDD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C44A12-33F0-41D8-8739-BFDE6A4CDD50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C2FAB36-0D33-4253-99CD-10E17076E2AE} = {85558385-9042-49F1-8181-AF11EBAA0577}
+		{3E79D206-68B6-4703-AB0D-3253684D5A71} = {85558385-9042-49F1-8181-AF11EBAA0577}
+		{45C44A12-33F0-41D8-8739-BFDE6A4CDD50} = {85558385-9042-49F1-8181-AF11EBAA0577}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B24D8E4-3EAB-4135-B717-14C82C0DA406}
+	EndGlobalSection
+EndGlobal
