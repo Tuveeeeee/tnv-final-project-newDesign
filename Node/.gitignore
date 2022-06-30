@@ -108,3 +108,5 @@ dist
 
 # Angular
 .angular
+
+config.js
