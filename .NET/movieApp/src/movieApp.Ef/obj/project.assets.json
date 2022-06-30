@@ -2391,11 +2391,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manus\\OneDrive\\Desktop\\Progetto-Finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj",
+      "projectUniqueName": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.NET\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj",
       "projectName": "movieApp.Ef",
-      "projectPath": "C:\\Users\\manus\\OneDrive\\Desktop\\Progetto-Finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj",
+      "projectPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.NET\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj",
       "packagesPath": "C:\\Users\\manus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manus\\OneDrive\\Desktop\\Progetto-Finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Ef\\obj\\",
+      "outputPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.NET\\movieApp\\src\\movieApp.Ef\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\manus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2412,8 +2412,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\manus\\OneDrive\\Desktop\\Progetto-Finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Core\\movieApp.Core.csproj": {
-              "projectPath": "C:\\Users\\manus\\OneDrive\\Desktop\\Progetto-Finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Core\\movieApp.Core.csproj"
+            "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Core\\movieApp.Core.csproj": {
+              "projectPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Core\\movieApp.Core.csproj"
             }
           }
         }

@@ -2549,11 +2549,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.RestAPI\\movieApp.RestAPI.csproj",
+      "projectUniqueName": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.RestAPI\\movieApp.RestAPI.csproj",
       "projectName": "movieApp.RestAPI",
-      "projectPath": "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.RestAPI\\movieApp.RestAPI.csproj",
+      "projectPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.RestAPI\\movieApp.RestAPI.csproj",
       "packagesPath": "C:\\Users\\manus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.RestAPI\\obj\\",
+      "outputPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.RestAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\manus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2570,11 +2570,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.Core\\movieApp.Core.csproj": {
-              "projectPath": "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.Core\\movieApp.Core.csproj"
+            "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Core\\movieApp.Core.csproj": {
+              "projectPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Core\\movieApp.Core.csproj"
             },
-            "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj": {
-              "projectPath": "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj"
+            "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.NET\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj": {
+              "projectPath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.NET\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OH1i9yMq8xBeYvs3jWyPiHiYTlwdDmOQ8Rz+QhGbF63UXAU2/ow/8yrwTD97sbG0zaZf/zIvAzY0HC351wIqzQ==",
+  "dgSpecHash": "7r+4/+U9rOhYq0Vxz0LOT+bSd4DNI+oh9rCtdX4rxTGVSmA6aFH2QZKOdYwGsNaXEEh4nOy8x7KTcSb8xIotEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\manus\\OneDrive\\Desktop\\TNV\\MovieApp\\src\\movieApp.RestAPI\\movieApp.RestAPI.csproj",
+  "projectFilePath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.RestAPI\\movieApp.RestAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manus\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\manus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BpCzYVP7Jl+dXa8ExP9S4xpwgPi6hwNOIDmlDSrfsnW0b2xfuD8czjLBzYcC134CFiAGEZ7dbc6LbhxhW0L8ig==",
+  "dgSpecHash": "0/UIbxtQ/Bg75MgMM2PyngeuLaZW5ZAATEqJN38FT/6qKzUf8GzY+Y1liXmYK8bOAMuCfJoBpMufsqRvxvTsfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\manus\\OneDrive\\Desktop\\Progetto-Finale\\tnv-academy-project-template\\.net\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj",
+  "projectFilePath": "C:\\Users\\manus\\onedrive\\desktop\\progetto-finale\\tnv-academy-project-template\\.NET\\movieApp\\src\\movieApp.Ef\\movieApp.Ef.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manus\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\manus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
