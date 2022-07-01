@@ -35,6 +35,16 @@ public class UserService {
         return userDAO.findByUsernameLike(username);
     }
 
+    public String getUserByUsernameAndPassowrd (String username, String password) {
+        List<User> user = userDAO.findByUsernameAndPassword(username, password);
+
+        if (user == null){
+            return "Utente non trovato";
+        } else {
+            return "Utente trovato";
+        }
+    }
+
     public Iterable<User> allUsers() {
         return userDAO.findAll();
     }
@@ -61,5 +71,9 @@ public class UserService {
             userDAO.delete(userRecuperato);
             return "Utente cancellato correttamente";
         }
+    }
+
+    public User register (User newUser){
+        return userDAO.save(newUser);
     }
 }

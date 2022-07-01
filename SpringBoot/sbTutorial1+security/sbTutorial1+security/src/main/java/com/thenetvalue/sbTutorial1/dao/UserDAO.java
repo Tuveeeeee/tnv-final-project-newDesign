@@ -11,4 +11,5 @@ public interface UserDAO {
     public List<User> allUsers();
     public int updateUser(int id, User user);
     public int deleteUser(int id);
+    public int register(User newUser);
 }
