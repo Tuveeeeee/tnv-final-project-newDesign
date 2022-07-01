@@ -3,7 +3,7 @@
 }
 
 .img {
-  background-image: url("/assets/images/login-screen.jpg");
+  background-image: url("/assets/images/reg-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -12,8 +12,14 @@
 .wrap {
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
+
+button{
+  background-color: #202026;
+  color: #fff;
+}
+  
+
 
 @media only screen and (max-width: 768px) {
   .register-card {

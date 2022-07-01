@@ -16,6 +16,7 @@ import { RankingsComponent } from './components/rankings/rankings.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameComponent } from './game/game.component';
 import { PlayComponent } from './play/play.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { PlayComponent } from './play/play.component';
     RankingsComponent,
     GameComponent,
     PlayComponent,
+    FooterComponent,
    
   ],
   imports: [

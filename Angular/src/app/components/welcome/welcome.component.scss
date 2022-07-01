@@ -5,39 +5,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.img {
-    background-image: url('../../../assets/images/login-screen.jpg.jpg');
-    background-size: cover;
-   
-    background-repeat: no-repeat;
-    
-  }
-
-header {
-    background-position: 50px 100px;
-    width: 90;
-    height: 400px;
-    background-image: url('../../../assets/images//login-screen.jpg.jpg');
-    background-size:auto;
-    background-position: bottom;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 0 3px 5px lightgray;
-}
-
 header h1 {
     color: black;
-    font-size: 50px;
+    font-size: 10vw;
     margin: 0;
     text-shadow: 2px 2px 4px white;
 }
 
 header p {
     color: white;
-    font-family: 'Pacifico', cursive;
-    font-size: 2.3rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3vw;
 }
