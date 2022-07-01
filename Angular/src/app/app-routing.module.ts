@@ -8,6 +8,8 @@ import { RegisterComponent } from "./@shared/components/register/register.compon
 import { WelcomeComponent } from "./components/welcome/welcome.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { RankingsComponent } from "./components/rankings/rankings.component";
+import { GameComponent } from "./game/game.component";
+import { PlayComponent } from "./play/play.component";
 
 const routes: Routes = [
   {
@@ -16,6 +18,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: "welcome", component: WelcomeComponent },
+      { path: "game", component: GameComponent},
+      { path: "play", component: PlayComponent},
       { path: "profile", component: ProfileComponent },
       { path: "rankings", component: RankingsComponent },
       { path: "", redirectTo: "welcome", pathMatch: 'full' },

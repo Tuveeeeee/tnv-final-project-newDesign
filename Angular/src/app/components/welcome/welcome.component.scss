@@ -6,18 +6,20 @@ body {
 }
 
 .img {
-    background-image: url('../../../assets/images/login-screen.jpg');
+    background-image: url('../../../assets/images/login-screen.jpg.jpg');
     background-size: cover;
+   
     background-repeat: no-repeat;
-    background-position: center center;
+    
   }
 
 header {
-    width: 100%;
-    height: 500px;
-    background-image: url('../../../assets/images/login-screen.jpg');
-    background-size: cover;
-    background-position: center;
+    background-position: 50px 100px;
+    width: 90;
+    height: 400px;
+    background-image: url('../../../assets/images//login-screen.jpg.jpg');
+    background-size:auto;
+    background-position: bottom;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -25,23 +27,11 @@ header {
     box-shadow: 0 3px 5px lightgray;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 64px;
-}
-
-.container section {
-    margin-top: 64px;
-    margin-bottom: 32px;
-}
-
-
 header h1 {
-    color: white;
-    font-size: 128px;
+    color: black;
+    font-size: 50px;
     margin: 0;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px white;
 }
 
 header p {
