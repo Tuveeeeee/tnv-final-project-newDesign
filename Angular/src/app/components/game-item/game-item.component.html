@@ -1,4 +1,4 @@
-<div class = "card" style="width: 20rem;">
+<div class = "card" style="width: 15rem;">
     <img
         [src] = "'https://image.tmdb.org/t/p/w440_and_h660_face' + movie.poster_path"
         class = "card-image"
@@ -6,7 +6,7 @@
     <div class = "card-body">
         <h5 class = "card-title">
             {{movie.title | titlecase}}
-            <td><ngb-rating [rate]="5" [max]="5"></ngb-rating></td>
+            <td class="d-flex justify-content-center"><ngb-rating [rate]="5" [max]="5"></ngb-rating></td>
         </h5>
         <p class ="card-text"></p>
     </div>
