@@ -11,6 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import ch.qos.logback.core.filter.Filter;
+
 import javax.sql.DataSource;
 
 @Configuration
@@ -57,7 +59,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/users/*")
                 .hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.POST, "/users/")
-                .hasAnyRole("ADMIN")
+                //.hasAnyRole("ADMIN")
+                .anonymous()
                 .antMatchers(HttpMethod.PUT, "/users/")
                 .hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/users/*")
@@ -70,5 +73,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     PasswordEncoder passwordEncoder() {
         return this.passwordEncoder;
+    }
+
+    @Bean
+    CorsFilter corsFilter(){
+        CorsFilter filter = new CorsFilter();
+        return filter;
     }
 }

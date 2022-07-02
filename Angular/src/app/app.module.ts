@@ -14,9 +14,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RankingsComponent } from './components/rankings/rankings.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GameComponent } from './game/game.component';
-import { PlayComponent } from './play/play.component';
+import { GameComponent } from './components/game/game.component';
+import { PlayComponent } from './components/play/play.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GameItemComponent } from './components/game-item/game-item.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FooterComponent } from './components/footer/footer.component';
     GameComponent,
     PlayComponent,
     FooterComponent,
+    GameItemComponent,
    
   ],
   imports: [
