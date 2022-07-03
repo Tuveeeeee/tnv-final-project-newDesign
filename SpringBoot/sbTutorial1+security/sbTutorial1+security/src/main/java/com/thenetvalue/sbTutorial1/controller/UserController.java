@@ -20,7 +20,7 @@ public class UserController {
 
     //CRUD operations (Create Read Update Delete)
 
-    @PostMapping("/{register/}")
+    @PostMapping("/register/}")
     public User register(@RequestBody User newUser){
         return userService.register(newUser);
     }

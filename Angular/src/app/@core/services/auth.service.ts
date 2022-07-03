@@ -26,7 +26,7 @@ export class AuthService {
 
   register(registerData: Partial<RegisterDTO>) {
     // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
-    return this.httpClient.post<RegisterDTO>("http://localhost:82", registerData);
+    return this.httpClient.post<RegisterDTO>("http://localhost:8080/users/register/", registerData);
     //this.router.navigateByUrl("/");
   }
 
