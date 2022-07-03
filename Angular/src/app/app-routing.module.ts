@@ -12,6 +12,7 @@ import { GameComponent } from "./components/game/game.component";
 import { PlayComponent } from "./components/play/play.component";
 import { FooterComponent } from '../app/components/footer/footer.component';
 import { GameItemComponent } from './components/game-item/game-item.component';
+import { RatingComponent } from "./components/rating/rating.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
       { path: "play", component: PlayComponent},
       { path: "profile", component: ProfileComponent },
       { path: "rankings", component: RankingsComponent },
+      { path: "rating/:id", component: RatingComponent},
       { path: "", redirectTo: "welcome", pathMatch: 'full' },
     ],
   },

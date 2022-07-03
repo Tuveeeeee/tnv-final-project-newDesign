@@ -18,6 +18,7 @@ import { GameComponent } from './components/game/game.component';
 import { PlayComponent } from './components/play/play.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GameItemComponent } from './components/game-item/game-item.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { GameItemComponent } from './components/game-item/game-item.component';
     PlayComponent,
     FooterComponent,
     GameItemComponent,
+    RatingComponent,
    
   ],
   imports: [

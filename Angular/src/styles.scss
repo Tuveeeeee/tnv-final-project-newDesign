@@ -11,6 +11,10 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 label {
   text-transform: uppercase;
   font-size: small;

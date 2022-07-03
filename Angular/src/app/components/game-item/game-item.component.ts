@@ -8,6 +8,8 @@ import { Movie } from '../../models/movie';
 })
 export class GameItemComponent implements OnInit {
 
+  starRating=0;
+  
   @Input() movie: Partial<Movie> = {};
   imageBaseUrl: string = "https://image.tmdb.org/t/p/w440_and_h660_face"
   
