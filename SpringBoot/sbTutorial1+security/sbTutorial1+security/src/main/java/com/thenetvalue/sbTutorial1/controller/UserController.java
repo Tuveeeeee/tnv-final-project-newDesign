@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/users")
+@CrossOrigin ("http://localhost:4200")
+@RequestMapping("/")
 public class UserController {
     private UserService userService;
 
@@ -20,12 +20,13 @@ public class UserController {
 
     //CRUD operations (Create Read Update Delete)
 
-    @PostMapping("/registration/")
+    @PostMapping("/{register/}")
     public User register(@RequestBody User newUser){
         return userService.register(newUser);
     }
 
-    @PostMapping("/")
+   /*
+   @PostMapping("/")
     public String addUser(@RequestBody User user) {
         return userService.addUser(user);
     }
@@ -33,8 +34,8 @@ public class UserController {
     @GetMapping("/{id}")
     public User getUserById(@PathVariable("id") int identificativo) {
         return userService.getUser(identificativo);
-    }
-
+    } */ 
+/* */
     //@GetMapping("/username/{username}/password/{password}")
 
     @GetMapping("/username/{username}")
