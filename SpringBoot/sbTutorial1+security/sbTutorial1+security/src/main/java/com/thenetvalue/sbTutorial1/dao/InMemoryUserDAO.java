@@ -19,12 +19,6 @@ public class InMemoryUserDAO implements UserDAO {
         return InMemoryDatabase.getUserById(id);
     }
 
-    public int addEmail(int id, String email) {
-        User user = InMemoryDatabase.getUserById(id);
-        user.setEmail(email);
-        return 1;
-    }
-
     @Override
     public List<User> allUsers() {
         return InMemoryDatabase.getUsers();

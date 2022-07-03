@@ -8,7 +8,7 @@ namespace movieApp.Core.Model
 {
     public class Comments
     {
-        public const int MIN_COMMENTS = 10;
+        public const int MIN_COMMENTS = 50;
 
         public int Id { get; set; }
         public int User_Id { get; set; }

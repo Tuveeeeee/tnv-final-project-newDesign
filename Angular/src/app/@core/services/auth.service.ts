@@ -8,7 +8,7 @@ import { LoginDTO, RegisterDTO, User } from "src/app/models/user";
   providedIn: "root",
 })
 export class AuthService {
-  springBaseUrl : string = "http://localhost:4200/users/"
+  springBaseUrl : string = "http://localhost:8080/users/"
   constructor(private httpClient: HttpClient, private router: Router) {}
 
   login(loginData: LoginDTO) {
@@ -26,9 +26,10 @@ export class AuthService {
 
   register(registerData: Partial<RegisterDTO>) {
     // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
-    return this.httpClient.post<RegisterDTO>("http://localhost:8080/users/register/", registerData);
+    return this.httpClient.post<RegisterDTO>("http://localhost:8080/users/", registerData);
     //this.router.navigateByUrl("/");
   }
+
 
   logout() {
     localStorage.removeItem("user");

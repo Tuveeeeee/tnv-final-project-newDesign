@@ -6,12 +6,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import ch.qos.logback.core.filter.Filter;
+
+import java.util.Arrays;
 
 import javax.sql.DataSource;
 
@@ -59,7 +66,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/users/*")
                 .hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.POST, "/users/")
-                .hasAnyRole("ADMIN")
+                .permitAll()
                 .antMatchers(HttpMethod.PUT, "/users/")
                 .hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/users/*")
@@ -74,9 +81,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return this.passwordEncoder;
     }
 
-    @Bean
-    CorsFilter corsFilter(){
-        CorsFilter filter = new CorsFilter();
-        return filter;
+    @Override
+    public void configure(final WebSecurity web) {
+        web.ignoring().antMatchers(HttpMethod.OPTIONS);
     }
 }

@@ -2,29 +2,38 @@ package com.thenetvalue.sbTutorial1.service;
 
 import com.thenetvalue.sbTutorial1.dao.UserDAO;
 import com.thenetvalue.sbTutorial1.dao.UserRepositoryDAO;
+import com.thenetvalue.sbTutorial1.model.Ruolo;
 import com.thenetvalue.sbTutorial1.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import com.thenetvalue.sbTutorial1.dao.InMemoryUserDAO;
 
 import java.util.List;
 
 @Service
 public class UserService {
     UserRepositoryDAO userDAO;
+    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @Autowired
     public UserService(@Qualifier("dbUserDAO") UserRepositoryDAO userDAO) {
         this.userDAO = userDAO;
     }
 
-    public String addUser(User user) {
-        User resultUser = userDAO.save(user);
-        if (resultUser != null) {
-            return "Utente salvato correttamente";
-        } else {
-            return "Errore nel salvataggio dell'utente";
-        }
+    public User addUser(String name, String surname, String username, String password) {
+        User user = new User();
+        user.setName(name);
+        user.setSurname(surname);
+        user.setUsername(username);
+        user.setPassword(passwordEncoder.encode(password));
+        user.setRole(Ruolo.ROLE_USER.name());
+        user.setAuthorities(Ruolo.ROLE_USER.getAuthorities());
+        user.setEnabled(true);
+        userDAO.save(user);
+        return user;
     }
 
     public User getUser(int id) {

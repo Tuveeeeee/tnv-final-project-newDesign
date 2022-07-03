@@ -1,13 +1,17 @@
 package com.thenetvalue.sbTutorial1.model;
 
-public class Ruolo {
-    private String nome;
+public enum Ruolo {
+    ROLE_USER(Authorities.USER_AUTHORITIES),
+    ROLE_MOD(Authorities.MOD_AUTHORITIES),
+    ROLE_ADMIN(Authorities.ADMIN_AUTHORITIES);
 
-    public String getNome() {
-        return nome;
+    private String[] authorities;
+
+    Ruolo(String... authorities) {
+        this.authorities = authorities;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String[] getAuthorities() {
+        return authorities;
     }
 }
