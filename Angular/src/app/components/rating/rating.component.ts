@@ -3,8 +3,7 @@ import { MovieService } from 'src/app/@core/services/movie.service';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from '../../models/movie';
 import { Router } from '@angular/router';
-import { NgForm } from "@angular/forms";
-
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'tnv-rating',
@@ -13,9 +12,13 @@ import { NgForm } from "@angular/forms";
 })
 export class RatingComponent implements OnInit {
 
+  reviewForm = new FormGroup({
+    rating: new FormControl('', Validators.required),
+    review: new FormControl('', [Validators.minLength(50), Validators.required]),
+  });
+
   movie: Partial<Movie> = {};
   id: string='';
-  starRating: number = 0;
 
   constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router) { }
 
@@ -25,5 +28,10 @@ export class RatingComponent implements OnInit {
       next: (res: Partial<Movie>) => {this.movie=res},
       error: () => {this.router.navigateByUrl('/game')},
     })
+  }
+
+  onSubmit() {
+    if(this.reviewForm.valid)
+      this.router.navigateByUrl('/game');
   }
 }

@@ -11,13 +11,26 @@
                 <h2>{{movie.title}}</h2>
                 <ul>
                     <li>
-                        <label class="m-0 pt-2">Ratings:</label>
-                        <td class="px-3 pb-2"><ngb-rating [(rate)]="starRating" [max]="5" id="rating"></ngb-rating></td>
-                        <label class="m-0">Commento:</label>
-                        <br>
-                        <textarea cols="60" rows="5" id="review"></textarea> 
-                        <br>     
-                        <button class="custom-btn">INVIA</button>
+                        <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+                            <label class="m-0 pt-2" for="rating">Ratings:</label>
+                            <td class="px-3 pb-2"><ngb-rating 
+                                [rate]="0" 
+                                [max]="5" 
+                                id="rating"
+                                formControlName="rating"
+                                >
+                            </ngb-rating></td>
+                            <label class="m-0" for="review">Commento:</label>
+                            <br>
+                            <textarea 
+                            cols="60" 
+                            rows="5" 
+                            id="review"
+                            formControlName="review"
+                            ></textarea> 
+                            <br>     
+                            <button [disabled]="!reviewForm.valid" class="custom-btn" type="submit">INVIA</button>
+                        </form>
                     </li>
                 </ul>
             </li>

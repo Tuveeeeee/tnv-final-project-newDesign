@@ -19,6 +19,7 @@ import { PlayComponent } from './components/play/play.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GameItemComponent } from './components/game-item/game-item.component';
 import { RatingComponent } from './components/rating/rating.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { RatingComponent } from './components/rating/rating.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
