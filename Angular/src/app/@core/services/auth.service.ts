@@ -36,7 +36,7 @@ export class AuthService {
 
   register(registerData: Partial<RegisterDTO>) {
     // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
-    return this.httpClient.post<LoginDTO>(`${this.springBaseUrl}/`, registerData);
+    return this.httpClient.post<RegisterDTO>(`${this.springBaseUrl}/`, registerData);
   }
 
   logout() {
