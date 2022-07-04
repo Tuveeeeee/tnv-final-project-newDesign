@@ -1,1 +1,59 @@
+.card{
+    border-radius: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+}
 
+p{
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+}
+
+ngb-rating{
+    font-size: 30px;
+}
+
+button {
+    outline: none;
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background: #202026;
+    border-radius: 3px;
+    color: #fff;
+    z-index: 1;
+}
+button:after {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 0;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+    background: #fff;
+   transition: all 0.3s ease;
+ }
+button:hover {
+   color: #000;
+}
+button:hover:after {
+   top: 0;
+   height: 100%;
+}
+button:active {
+   top: 2px;
+}
+  
+  

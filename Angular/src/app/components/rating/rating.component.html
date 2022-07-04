@@ -1,12 +1,26 @@
-<div class = "card" style="width: 15rem;">
-    <img
-        [src] = "'https://image.tmdb.org/t/p/w440_and_h660_face' + movie.poster_path"
-        class = "card-image"
-    />
-    <div class = "card-body">
-        <h5 class = "card-title">
-            {{movie.title | titlecase}}
-            <td class="d-flex justify-content-center"><ngb-rating [rate]="0" [max]="5" ></ngb-rating></td>
-        </h5>
+<div class="container d-flex justify-content-center mt-5">
+    <div class = "card" style="width: 15rem;">
+        <img
+            [src] = "'https://image.tmdb.org/t/p/w440_and_h660_face' + movie.poster_path"
+            class = "card-image"
+        />
+    </div>
+    <div>
+        <ul>
+            <li>
+                <h2>{{movie.title}}</h2>
+                <ul>
+                    <li>
+                        <label class="m-0 pt-2">Ratings:</label>
+                        <td class="px-3 pb-2"><ngb-rating [(rate)]="starRating" [max]="5" id="rating"></ngb-rating></td>
+                        <label class="m-0">Commento:</label>
+                        <br>
+                        <textarea cols="60" rows="5" id="review"></textarea> 
+                        <br>     
+                        <button class="custom-btn">INVIA</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </div>
