@@ -33,13 +33,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
-                .dataSource(this.dataSource)
-                .usersByUsernameQuery("select username,password,enabled "
-                        + "from users "
-                        + "where username = ?")
-                .authoritiesByUsernameQuery("select username,authority "
-                        + "from authorities "
-                        + "where username = ?");
+        .dataSource(this.dataSource)
+        .usersByUsernameQuery("select username,password,enabled "
+                + "from user "
+                + "where username = ?")
+        .authoritiesByUsernameQuery("select username,role "
+                + "from user "
+                + "where username = ?");
                 /*.withUser("user")
                 .password(passwordEncoder.encode("user"))
                 .roles("USER")
@@ -61,6 +61,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.cors();
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/users/*")

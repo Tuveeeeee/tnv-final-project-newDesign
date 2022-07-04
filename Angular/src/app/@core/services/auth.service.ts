@@ -1,35 +1,43 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { Observable, of } from "rxjs";
+import { of } from "rxjs";
 import { LoginDTO, RegisterDTO, User } from "src/app/models/user";
 
 @Injectable({
   providedIn: "root",
 })
 export class AuthService {
-  springBaseUrl : string = "http://localhost:8080/users/"
-  constructor(private httpClient: HttpClient, private router: Router) {}
+
+  springBaseUrl: string = 'http://localhost:8080/users';
+
+  constructor(private router: Router, private httpClient: HttpClient) {}
 
   login(loginData: LoginDTO) {
     // TODO Chiamare il servizio per l'autenticazione e salvare l'utente corrente nel localStorage
-    const response: User = {
-      name: "Paolino",
-      surname: "Paperino",
-      username: "paolino504"
-    };
-
+    const httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic ' + btoa(loginData.username+":"+loginData.password)
+        })
+      };
+      
+      const response: User = {
+        name: "Paolino",
+        surname: "Paperino",
+        username: `${loginData.username}`
+      };
+    
     localStorage.setItem("user", JSON.stringify(response));
-
-    return of('login ok');
+    
+    return this.httpClient.get<LoginDTO>(`${this.springBaseUrl}/username/${loginData.username}/password/${loginData.password}`, httpOptions);
+    //return of('login ok');
   }
 
   register(registerData: Partial<RegisterDTO>) {
     // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
-    return this.httpClient.post<RegisterDTO>("http://localhost:8080/users/", registerData);
-    //this.router.navigateByUrl("/");
+    return this.httpClient.post<LoginDTO>(`${this.springBaseUrl}/`, registerData);
   }
-
 
   logout() {
     localStorage.removeItem("user");
@@ -43,4 +51,5 @@ export class AuthService {
     const user = JSON.parse(localStorage.getItem("user") || '') as User;
     return user;
   }
+
 }

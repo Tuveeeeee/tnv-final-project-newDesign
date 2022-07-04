@@ -47,9 +47,8 @@ public class UserController {
     }
 
     @GetMapping("/username/{username}/password/{password}")
-    public String getUserByUsernameAndPassword(@PathVariable("username") String username, 
-                                                        @PathVariable("password") String Password) {
-        return userService.getUserByUsernameAndPassowrd(username, Password);
+    public Iterable<User> getUserByUsernameAndPassword(@PathVariable("username") String username, @PathVariable ("password") String password){
+        return userService.getUserByUsernameAndPassword(username, password);
     }
 
     //allUsers - GET
