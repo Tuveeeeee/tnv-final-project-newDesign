@@ -58,6 +58,9 @@
             </button>
           </div>
         </form>
+        <div class="error d-flex justify-content-center mt-2" *ngIf="errorFlag">
+          <a>password errata o account inesistente</a>
+        </div>
         <p class="text-center mt-3">
           Non sei iscritto?
           <a data-toggle="tab" routerLink="/register">Registrati</a>
