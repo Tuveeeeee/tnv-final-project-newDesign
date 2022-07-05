@@ -1,3 +1,5 @@
 export interface Review{
-    review: string
+    review: string;
+    movieId: number;
+    userId: number;
 }
