@@ -23,6 +23,7 @@ header .logo
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  text-shadow: black 3px  4px 5px;
 }
 
 .showcase
@@ -76,17 +77,19 @@ header .logo
 {
   font-size: 5em;
   font-weight: 800;
-  color:#E2556A;
+  color:#f2c53d;
   line-height: 1em;
   text-transform: uppercase;
+  text-shadow: black 3px  4px 5px;
 }
 .text h3
 {
   font-size: 4em;
   font-weight: 700;
-  color: #E2556A;
+  color: #f2c53d;
   line-height: 1em;
   text-transform: uppercase;
+  text-shadow: black 3px  4px 5px;
 }
 .text p
 {
@@ -95,6 +98,7 @@ header .logo
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
+  text-shadow: black 2px  2px 3px;
 }
 .text a
 {
@@ -109,6 +113,7 @@ header .logo
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
+  
 }
 .text a:hover
 {
