@@ -22,16 +22,21 @@ export class AuthService {
         })
       };
       
-      const response: User = {
+      /*const response: User = {
         name: "Paolino",
         surname: "Paperino",
         username: `${loginData.username}`
       };
     
-    localStorage.setItem("user", JSON.stringify(response));
+    localStorage.setItem("user", JSON.stringify(response));*/
     
-    return this.httpClient.get<LoginDTO>(`${this.springBaseUrl}/username/${loginData.username}/password/${loginData.password}`, httpOptions);
+    return this.httpClient.get<Partial<LoginDTO>>(`${this.springBaseUrl}/username/${loginData.username}/password/${loginData.password}`, httpOptions);
     //return of('login ok');
+  }
+
+  saveUser(loginData: Partial<LoginDTO>){
+    localStorage.setItem("user", JSON.stringify(loginData));
+    return of('login ok');
   }
 
   register(registerData: Partial<RegisterDTO>) {

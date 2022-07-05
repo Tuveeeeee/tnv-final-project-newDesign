@@ -4,6 +4,7 @@ using movieApp.Core.BL.Service;
 using movieApp.Core.Model;
 using movieApp.RestAPI.Mapper;
 using movieApp.RestAPI.Model;
+using Microsoft.AspNetCore.Cors;
 
 namespace movieApp.RestAPI.Controllers
 {
@@ -18,6 +19,7 @@ namespace movieApp.RestAPI.Controllers
             _applicationManager = new ApplicationManager(storageService);
         }
 
+        [EnableCors("Policy1")]
         [HttpGet]
         public ActionResult<List<CommentContract>> GetAllComments()
         {
@@ -27,6 +29,7 @@ namespace movieApp.RestAPI.Controllers
             return Ok(comments);
         }
 
+        [EnableCors("Policy1")]
         [HttpGet]
         [Route("{comment-id}")]
         public ActionResult<CommentContract> GetCommentById([FromRoute(Name = "comment-id")] int commentId)
@@ -47,6 +50,7 @@ namespace movieApp.RestAPI.Controllers
             }
         }
 
+        [EnableCors("Policy1")]
         [HttpDelete]
         [Route("{comment-id}")]
         public ActionResult<CommentContract> DeleteCommentById([FromRoute(Name = "comment-id")] int commentId)
@@ -68,6 +72,7 @@ namespace movieApp.RestAPI.Controllers
             }
         }
 
+        [EnableCors("Policy1")]
         [HttpPatch]
         [Route("{comment-id}")]
         public ActionResult<CommentContract> UpdateCommentById(
@@ -89,6 +94,7 @@ namespace movieApp.RestAPI.Controllers
             }
         }
 
+        [EnableCors("Policy1")]
         [HttpPatch]
         public ActionResult<CommentContract> CreateNewComment([FromBody] Comments newComment)
         {

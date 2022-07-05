@@ -9,8 +9,6 @@ import { AuthService } from "src/app/@core/services/auth.service";
   styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent implements OnInit {
-
-  errorFlag: boolean = false;
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
@@ -23,8 +21,10 @@ export class LoginComponent implements OnInit {
     form.control.markAllAsTouched();
     if (form.valid) {
       this.authService.login(form.value).subscribe({
-        next: () => this.router.navigateByUrl("/"),
-        error: () => this.errorFlag=true
+        next: (res) => {
+          this.authService.saveUser(res);
+          this.router.navigateByUrl("/");
+        }
       });
     }
   }
