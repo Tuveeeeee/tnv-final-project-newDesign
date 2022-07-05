@@ -15,7 +15,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
       for(let index= 0; index < 4; index++){
-      this.movieService.getRandomMovies(index);
+        this.movieService.getRandomMovies(index);
     }
   }
 

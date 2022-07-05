@@ -1,6 +1,20 @@
 .row{
     margin: 0px;
     justify-content: center;
-    text-align: center;
     align-items: center;
+}
+
+.arrow{
+    animation: arrow 2s ease-in-out infinite;
+}
+
+@keyframes arrow {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 0);
+    }
 }

@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Movie } from '../../models/movie';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ReviewService } from 'src/app/@core/services/review.service';
+import { RatingService } from '../../@core/services/rating.service';
 
 @Component({
   selector: 'tnv-rating',
@@ -19,8 +21,9 @@ export class RatingComponent implements OnInit {
 
   movie: Partial<Movie> = {};
   id: string='';
+  reviewValues: any;
 
-  constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router, private reviewService: ReviewService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -32,6 +35,18 @@ export class RatingComponent implements OnInit {
 
   onSubmit() {
     if(this.reviewForm.valid)
-      this.router.navigateByUrl('/game');
+      this.reviewValues = Object.entries(this.reviewForm.value).map((x) => x[1]);
+
+      /*
+      this.reviewService.addRating(this.reviewValues[0]).subscribe({
+        next: () => {this.router.navigateByUrl('/game')},
+        error: () => {console.log("error")},
+      });
+      */
+
+      this.reviewService.addReview(this.reviewValues[1]).subscribe({
+        next: () => {this.router.navigateByUrl('/game')},
+        error: () => {console.log("error")},
+      });
   }
 }
