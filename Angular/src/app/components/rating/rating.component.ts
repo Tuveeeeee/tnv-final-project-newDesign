@@ -38,8 +38,6 @@ export class RatingComponent implements OnInit {
     })
     //this.rat.userId=;
     //this.rev.userId=;
-    this.rev.movieId=this.movie.id;
-    this.rat.movieId=this.movie.id;
   }
 
   onSubmit() {
@@ -48,16 +46,19 @@ export class RatingComponent implements OnInit {
       this.rat.rating=this.reviewValues[0];
       this.rev.review=this.reviewValues[1];
 
-      /*
+      this.rev.movieId=this.movie.id;
+      this.rat.movieId=this.movie.id;
+
+      
       this.ratingService.createRating(this.rat).subscribe({
         next: () => {this.router.navigateByUrl('/game')},
         error: () => {console.log("error")},
       });
-      */
+      
 
-      //this.reviewService.addReview(this.rev).subscribe({
-      //  next: () => {this.router.navigateByUrl('/game')},
-      //  error: () => {console.log("error")},
-      //});
+      this.reviewService.addReview(this.rev).subscribe({
+        next: () => {this.router.navigateByUrl('/game')},
+        error: () => {console.log("error")},
+      });
   }
 }
