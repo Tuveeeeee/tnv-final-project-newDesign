@@ -2,7 +2,7 @@ import express from "express";
 
 const API_ROOT = '/api';
 
-import { getRating, createRating, updateRating, deleteRating } from "../controllers/ratings-controller.js";
+import { getRating, getAllRating, createRating, updateRating, deleteRating } from "../controllers/ratings-controller.js";
 
 const router = express.Router();
 

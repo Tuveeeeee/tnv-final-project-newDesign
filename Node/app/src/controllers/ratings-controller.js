@@ -21,8 +21,25 @@ export const getRating = async (req, res) => {
 }
 
 export const getAllRating = async (req, res) => {
-    
+    try {
+        const rating = await Rating.findAll({
+            where: {
+                userId: req.params.userId,
+                movieId: req.params.movieId,
+            }
+        });
+        
+        if (rating) {
+            res.send(rating);
+        } else {
+            res.sendStatus(404);
+        }
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
 }
+    
 
 export const createRating = async (req, res) => {
     try {
