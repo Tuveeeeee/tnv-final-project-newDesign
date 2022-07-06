@@ -95,7 +95,7 @@ namespace movieApp.RestAPI.Controllers
         }
 
         [EnableCors("Policy1")]
-        [HttpPatch]
+        [HttpPost]
         public ActionResult<CommentContract> CreateNewComment([FromBody] Comments newComment)
         {
             try

@@ -14,4 +14,5 @@ export interface RegisterDTO {
   surname: string;
   username: string;
   password: string;
+  faction: boolean;
 }

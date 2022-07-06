@@ -14,7 +14,7 @@ namespace movieApp.Ef
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            var connectionString = "Server=localhost;Port=3306;Database=movie_app;Uid=root;Pwd=";
+            var connectionString = "Server=localhost;Port=3306;Database=movie_app.review;Uid=root;Pwd=";
             var mySqlServerVersion = new MySqlServerVersion(new Version(10, 4, 24));
 
             optionBuilder.UseMySql(connectionString, mySqlServerVersion);

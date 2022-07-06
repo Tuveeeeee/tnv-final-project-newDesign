@@ -7,11 +7,11 @@ import { Review } from 'src/app/models/review';
 })
 export class ReviewService {
 
-  dotnetBaseUrl : string ="http://localhost:5203/api/comments"
+  dotnetBaseUrl : string ="https://localhost:5203/api/comments"
 
   constructor(private httpClient: HttpClient) { }
 
   addReview(review: Partial<Review>){
-    return this.httpClient.post<Review>("http://localhost:5203/api/comments", review);
+    return this.httpClient.patch<Review>("https://localhost:5203/api/comments", review);
   }
 }

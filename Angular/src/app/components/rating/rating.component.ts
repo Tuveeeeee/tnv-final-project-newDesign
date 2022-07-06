@@ -8,6 +8,7 @@ import { ReviewService } from 'src/app/@core/services/review.service';
 import { RatingService } from 'src/app/@core/services/rating.service';
 import { Review } from 'src/app/models/review';
 import { Rating } from 'src/app/models/rating';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'tnv-rating',

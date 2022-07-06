@@ -10,6 +10,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    private boolean factionBlue = true;
     private String name;
     private String surname;
     private String username;
@@ -100,6 +101,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean isFaction() {
+        return factionBlue;
+    }
+
+    public void setFaction(boolean faction) {
+        this.factionBlue = faction;
     }
 
 }

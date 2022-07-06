@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GameItemComponent } from './components/game-item/game-item.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     GameItemComponent,
     RatingComponent,
+    FavoritesComponent,
    
   ],
   imports: [
