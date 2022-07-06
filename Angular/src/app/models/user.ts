@@ -3,6 +3,7 @@ export interface User {
   surname: string;
   username: string;
   id: number;
+  faction: string;
 }
 
 export interface LoginDTO {
