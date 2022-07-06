@@ -23,11 +23,12 @@ public class UserService {
         this.userDAO = userDAO;
     }
 
-    public User addUser(String name, String surname, String username, String password) {
+    public User addUser(String name, String surname, String username, String password, String faction) {
         User user = new User();
         user.setName(name);
         user.setSurname(surname);
         user.setUsername(username);
+        user.setFaction(faction);
         user.setPassword(passwordEncoder.encode(password));
         user.setRole(Ruolo.ROLE_USER.name());
         user.setAuthorities(Ruolo.ROLE_USER.getAuthorities());

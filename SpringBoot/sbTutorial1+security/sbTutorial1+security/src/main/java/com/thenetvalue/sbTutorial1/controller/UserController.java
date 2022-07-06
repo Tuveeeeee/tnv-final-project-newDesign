@@ -30,7 +30,7 @@ public class UserController {
    
     @PostMapping("/")
     public ResponseEntity<User> addUser(@RequestBody User user) {
-        User newUser = userService.addUser(user.getName(), user.getSurname(), user.getUsername(), user.getPassword());
+        User newUser = userService.addUser(user.getName(), user.getSurname(), user.getUsername(), user.getPassword(), user.getFaction());
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 

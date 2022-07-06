@@ -3,7 +3,6 @@ export interface User {
   surname: string;
   username: string;
   id: number;
-  faction: boolean;
 }
 
 export interface LoginDTO {
@@ -16,7 +15,7 @@ export interface RegisterDTO {
   surname: string;
   username: string;
   password: string;
-  faction: boolean;
+  faction: string;
 }
 
 

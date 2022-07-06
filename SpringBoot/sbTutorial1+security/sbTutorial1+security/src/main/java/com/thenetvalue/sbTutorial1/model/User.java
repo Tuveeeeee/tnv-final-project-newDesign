@@ -10,7 +10,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private boolean faction = true;
+    private String faction;
     private String name;
     private String surname;
     private String username;
@@ -103,11 +103,11 @@ public class User {
         this.password = password;
     }
 
-    public boolean isFaction() {
+    public String getFaction() {
         return faction;
     }
 
-    public void setFaction(boolean faction) {
+    public void setFaction(String faction) {
         this.faction = faction;
     }
 

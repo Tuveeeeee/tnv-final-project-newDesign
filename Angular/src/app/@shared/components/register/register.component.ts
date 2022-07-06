@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register(form: NgForm) {
+    console.log(form.value);
     form.control.markAllAsTouched();
     if (form.valid) {
       this.authService.register(form.value).subscribe({
