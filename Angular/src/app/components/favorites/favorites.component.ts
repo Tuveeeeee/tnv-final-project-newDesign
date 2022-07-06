@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/@core/services/movie.service';
+import { AuthService } from 'src/app/@core/services/auth.service';
+
 
 @Component({
   selector: 'tnv-favorites',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private movieService: MovieService, private authService: AuthService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

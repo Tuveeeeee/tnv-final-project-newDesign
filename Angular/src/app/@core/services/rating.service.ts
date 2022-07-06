@@ -11,6 +11,10 @@ export class RatingService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getAllRating(){
+    return this.httpClient.get<Rating[]>(`${this.nodeBaseUrl}/`);
+  }
+  
   getRating(userId: number, movieId: number){
     return this.httpClient.get<Rating>(`${this.nodeBaseUrl}/rating${userId}/${movieId}`);
   }

@@ -20,6 +20,10 @@ export const getRating = async (req, res) => {
     }
 }
 
+export const getAllRating = async (req, res) => {
+    
+}
+
 export const createRating = async (req, res) => {
     try {
         const rating = await Rating.create(req.body);

@@ -13,6 +13,7 @@ import { PlayComponent } from "./components/play/play.component";
 import { FooterComponent } from '../app/components/footer/footer.component';
 import { GameItemComponent } from './components/game-item/game-item.component';
 import { RatingComponent } from "./components/rating/rating.component";
+import { FavoritesComponent } from "./components/favorites/favorites.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,7 @@ const routes: Routes = [
       { path: "profile", component: ProfileComponent },
       { path: "rankings", component: RankingsComponent },
       { path: "rating/:id", component: RatingComponent},
+      { path: "favorites", component: FavoritesComponent},    
       { path: "", redirectTo: "welcome", pathMatch: 'full' },
     ],
   },
