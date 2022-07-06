@@ -11,7 +11,7 @@ export class ReviewService {
 
   constructor(private httpClient: HttpClient) { }
 
-  addReview(review: Review){
+  addReview(review: Partial<Review>){
     return this.httpClient.post<Review>("http://localhost:5203/api/comments", review);
   }
 }
