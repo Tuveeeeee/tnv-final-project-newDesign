@@ -11,6 +11,7 @@ import { AuthService } from "src/app/@core/services/auth.service";
 export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
 
+  flagErrore: boolean=false;
   ngOnInit(): void {
     if (this.authService.isAuthenticated()) {
       this.router.navigateByUrl("/");
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
         next: (res) => {
           this.authService.saveUser(res);
           this.router.navigateByUrl("/");
-        }
+        },
+        error: () => this.flagErrore=true
       });
     }
   }

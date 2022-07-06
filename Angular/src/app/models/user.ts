@@ -2,6 +2,8 @@ export interface User {
   name: string;
   surname: string;
   username: string;
+  id: number;
+  faction: boolean;
 }
 
 export interface LoginDTO {
@@ -16,3 +18,5 @@ export interface RegisterDTO {
   password: string;
   faction: boolean;
 }
+
+

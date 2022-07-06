@@ -8,7 +8,7 @@ import { ReviewService } from 'src/app/@core/services/review.service';
 import { RatingService } from 'src/app/@core/services/rating.service';
 import { Review } from 'src/app/models/review';
 import { Rating } from 'src/app/models/rating';
-import { HttpClient } from '@angular/common/http';
+import { AuthService } from 'src/app/@core/services/auth.service';
 
 @Component({
   selector: 'tnv-rating',
@@ -29,7 +29,7 @@ export class RatingComponent implements OnInit {
   id: string='';
   reviewValues: any;
 
-  constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router, private reviewService: ReviewService, private ratingService: RatingService) { }
+  constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router, private reviewService: ReviewService, private ratingService: RatingService, private authService: AuthService ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -46,9 +46,11 @@ export class RatingComponent implements OnInit {
       this.reviewValues = Object.entries(this.reviewForm.value).map((x) => x[1]);
       this.rat.rating=this.reviewValues[0];
       this.rev.review=this.reviewValues[1];
-
       this.rev.movieId=this.movie.id;
       this.rat.movieId=this.movie.id;
+      this.rat.userId=(Object.entries(this.authService.getCurrentUser()).map(x => x[1])[0]);
+      this.rev.userId=(Object.entries(this.authService.getCurrentUser()).map(x => x[1])[0]);
+
 
       
       this.ratingService.createRating(this.rat).subscribe({
@@ -63,3 +65,5 @@ export class RatingComponent implements OnInit {
       });
   }
 }
+
+

@@ -10,7 +10,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private boolean factionBlue = true;
+    private boolean faction = true;
     private String name;
     private String surname;
     private String username;
@@ -104,11 +104,11 @@ public class User {
     }
 
     public boolean isFaction() {
-        return factionBlue;
+        return faction;
     }
 
     public void setFaction(boolean faction) {
-        this.factionBlue = faction;
+        this.faction = faction;
     }
 
 }

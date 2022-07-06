@@ -9,6 +9,8 @@ import { LoginDTO, RegisterDTO, User } from "src/app/models/user";
 })
 export class AuthService {
 
+  user: Partial<User>={};
+
   springBaseUrl: string = 'http://localhost:8080/users';
 
   constructor(private router: Router, private httpClient: HttpClient) {}
@@ -34,14 +36,14 @@ export class AuthService {
     //return of('login ok');
   }
 
-  saveUser(loginData: Partial<LoginDTO>){
-    localStorage.setItem("user", JSON.stringify(loginData));
+  saveUser(userData: Partial<User>){
+    localStorage.setItem("user", JSON.stringify(userData));
     return of('login ok');
   }
 
   register(registerData: Partial<RegisterDTO>) {
     // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
-    return this.httpClient.post<RegisterDTO>(`${this.springBaseUrl}/`, registerData);
+    return this.httpClient.post<Partial<RegisterDTO>>(`${this.springBaseUrl}/`, registerData);
   }
 
   logout() {
@@ -55,6 +57,10 @@ export class AuthService {
   getCurrentUser() {
     const user = JSON.parse(localStorage.getItem("user") || '') as User;
     return user;
+  }
+
+  getAllUser(){
+    return this.httpClient.get<Partial<LoginDTO[]>>(`${this.springBaseUrl}/`);
   }
 
 }

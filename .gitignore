@@ -11,3 +11,7 @@
 .NET/movieApp/src/movieApp.Core/obj/Debug/net6.0/movieApp.Core.GeneratedMSBuildEditorConfig.editorconfig
 .NET/movieApp/src/movieApp.Ef/obj/Debug/net6.0/movieApp.Ef.assets.cache
 .NET/movieApp/src/movieApp.RestAPI/obj/Debug/net6.0/movieApp.RestAPI.assets.cache
+.NET/movieApp/src/movieApp.Core/obj/Debug/net6.0/movieApp.Core.assets.cache
+.gitignore
+.gitignore
+.NET/movieApp/src/movieApp.RestAPI/obj/Debug/net6.0/movieApp.RestAPI.assets.cache

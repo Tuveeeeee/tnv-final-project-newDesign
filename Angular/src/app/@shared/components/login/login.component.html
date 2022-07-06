@@ -56,6 +56,9 @@
             >
               Login
             </button>
+            <div class="error d-flex justify-content-center mt-2">
+              <a *ngIf="flagErrore">Username o Password inesistenti</a>
+            </div>
           </div>
         </form>
         <p class="text-center mt-3">
