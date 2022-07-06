@@ -44,9 +44,14 @@ public class UserService {
         return userDAO.findByUsernameLike(username);
     }
 
-    public Iterable<User> getUserByUsernameAndPassword(String username, String password) {
-        Iterable<User> resultUser = userDAO.findByUsernameAndPassword(username, password);
-        return resultUser;
+    public User getUserByUsernameAndPassword(String username, String password) {
+        Iterable<User> resultUser = userDAO.findByUsernameLike(username);
+        for (User user : resultUser){
+            if (passwordEncoder.matches(password, user.getPassword())){
+                return user;
+            }
+        }
+        return null;
     }
 
     public Iterable<User> allUsers() {
