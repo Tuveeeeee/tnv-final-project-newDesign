@@ -1,1 +1,7 @@
-<p>favorites works!</p>
+<div class="row">
+    <tnv-game-item 
+        *ngFor="let movie of movies"
+        [movie]="movie"
+        class="col-12 col-sm-6 col-md-2 py-2 mx-3"
+    ></tnv-game-item>
+</div>
