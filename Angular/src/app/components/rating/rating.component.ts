@@ -41,28 +41,32 @@ export class RatingComponent implements OnInit {
     //this.rev.userId=;
   }
 
-  onSubmit() {
+  inizializzaReview(){
     if(this.reviewForm.valid)
-      this.reviewValues = Object.entries(this.reviewForm.value).map((x) => x[1]);
-      this.rat.rating=this.reviewValues[0];
-      this.rev.review=this.reviewValues[1];
-      this.rev.movieId=this.movie.id;
-      this.rat.movieId=this.movie.id;
-      this.rat.userId=(Object.entries(this.authService.getCurrentUser()).map(x => x[1])[0]);
-      this.rev.userId=(Object.entries(this.authService.getCurrentUser()).map(x => x[1])[0]);
+    this.reviewValues = Object.entries(this.reviewForm.value).map((x) => x[1]);
+    this.rat.rating=this.reviewValues[0];
+    this.rev.comment=this.reviewValues[1];
+    this.rev.movie_Id=this.movie.id;
+    this.rat.movieId=this.movie.id;
+    this.rat.userId=(Object.entries(this.authService.getCurrentUser()).map(x => x[1])[0]);
+    this.rev.user_Id=(Object.entries(this.authService.getCurrentUser()).map(x => x[1])[0]);
+  }
+
+  onSubmit() {
+    this.inizializzaReview();
 
 
       
-      this.ratingService.createRating(this.rat).subscribe({
+    this.ratingService.createRating(this.rat).subscribe({
         next: () => {this.router.navigateByUrl('/game')},
         error: () => {console.log("error")},
-      });
+    });
       
 
-      this.reviewService.addReview(this.rev).subscribe({
+    this.reviewService.addReview(this.rev).subscribe({
         next: () => {this.router.navigateByUrl('/game')},
         error: () => {console.log("error")},
-      });
+    });
   }
 }
 

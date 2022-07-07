@@ -3,7 +3,7 @@ import { MovieService } from 'src/app/@core/services/movie.service';
 import { AuthService } from 'src/app/@core/services/auth.service';
 import { RatingService } from 'src/app/@core/services/rating.service';
 import { Rating } from 'src/app/models/rating';
-import 
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,13 +15,13 @@ export class FavoritesComponent implements OnInit {
 
   ratings: Rating[]=[];
 
-  constructor(private movieService: MovieService, private authService: AuthService, private ratingService: RatingService) { }
+  constructor(private movieService: MovieService, private authService: AuthService, private ratingService: RatingService, private router: Router) { }
 
 
   ngOnInit(): void {
     this.ratingService.getAllRating().subscribe({
       next: res =>{ this.ratings=res },
-      error: 
+      error: () => this.router.navigateByUrl('/welcome')
     })
     
   }
