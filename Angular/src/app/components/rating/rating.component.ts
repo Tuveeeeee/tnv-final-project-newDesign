@@ -19,7 +19,7 @@ export class RatingComponent implements OnInit {
 
   reviewForm = new FormGroup({
     rating: new FormControl('', Validators.required),
-    review: new FormControl('', [Validators.minLength(50), Validators.required]),
+    review: new FormControl(''),
   });
 
   rev: Partial<Review>={};
