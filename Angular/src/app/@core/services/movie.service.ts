@@ -15,7 +15,7 @@ export class MovieService {
 
   private api_key: string='438f25e60ab0a1dbcfb9de7aa0a37d13';
 
-  getMovie(movieId: number){
+  getMovie(movieId: number | undefined){
     return this.httpClient.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.api_key}`);
   }
 

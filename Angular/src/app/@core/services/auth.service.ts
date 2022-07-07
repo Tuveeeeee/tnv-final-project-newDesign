@@ -63,4 +63,7 @@ export class AuthService {
     return this.httpClient.get<Partial<LoginDTO[]>>(`${this.springBaseUrl}/`);
   }
 
+  getUserById(id: number){
+    return this.httpClient.get<Partial<User>>(`${this.springBaseUrl}/${id}`);
+  }
 }

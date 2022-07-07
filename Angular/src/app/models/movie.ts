@@ -1,3 +1,8 @@
+export interface FactionMovies{
+    red: Partial<Movie>[];
+    blue: Partial<Movie>[];
+}
+
 export interface Movie {
     adult: boolean;
     backdrop_path: string;
