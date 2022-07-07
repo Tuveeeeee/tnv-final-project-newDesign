@@ -20,19 +20,20 @@ export class FavoritesComponent implements OnInit {
   constructor(private movieService: MovieService, private authService: AuthService, private ratingService: RatingService, private router: Router) { }
 
 
-  ngOnInit(): void {
-    this.ratingService.getAllRating().subscribe({
-      next: res =>{ this.ratings=res },
-      error: () => this.router.navigateByUrl('/welcome')
-    })
-
-    for(let rating of this.ratings){
+  getMovies(ratings: Rating[]){
+    for(let rating of ratings){
       this.movieService.getMovie(rating.movieId).subscribe({
         next: (res: Partial<Movie>) => {this.movies.push(res)},
         error: () => {this.router.navigateByUrl('/welcome')},
       })
     }
-    
   }
 
+  ngOnInit(): void {
+    this.ratingService.getAllRating().subscribe({
+      next: res =>{ this.getMovies(res) },
+      error: () => this.router.navigateByUrl('/welcome')
+    })
+  }
 }
+
