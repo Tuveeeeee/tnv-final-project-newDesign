@@ -23,10 +23,6 @@ export const getRating = async (req, res) => {
 export const getAllRating = async (req, res) => {
     try {
         const rating = await Rating.findAll({
-            where: {
-                userId: req.params.userId,
-                movieId: req.params.movieId,
-            }
         });
         
         if (rating) {
