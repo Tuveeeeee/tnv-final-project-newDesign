@@ -8,7 +8,6 @@ import { MovieService } from 'src/app/@core/services/movie.service';
 })
 export class GameComponent implements OnInit {
 
-  //title = 'tnv-project-template';
   constructor(private movieService: MovieService) {}
 
   movies = this.movieService.movies;

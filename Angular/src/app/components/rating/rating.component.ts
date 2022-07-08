@@ -19,7 +19,7 @@ export class RatingComponent implements OnInit {
 
   reviewForm = new FormGroup({
     rating: new FormControl('', Validators.required),
-    review: new FormControl(''),
+    review: new FormControl('', Validators.required),
   });
 
   rev: Partial<Review>={};
@@ -28,6 +28,8 @@ export class RatingComponent implements OnInit {
   movie: Partial<Movie> = {};
   id: string='';
   reviewValues: any;
+  flagErroreMinWord: boolean=false;
+  counterWord: number=50;
 
   constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router, private reviewService: ReviewService, private ratingService: RatingService, private authService: AuthService ) { }
 
@@ -41,6 +43,14 @@ export class RatingComponent implements OnInit {
     //this.rev.userId=;
   }
 
+  counter(){
+    this.reviewValues=Object.entries(this.reviewForm.value).map((x) => x[1]);
+    if(this.reviewValues[1].split(" ").filter((x: string) => x !== '').length<=50)
+      return this.counterWord - this.reviewValues[1].split(" ").filter((x: string) => x !== '').length;
+    else return 0;
+  }
+
+
   inizializzaReview(){
     if(this.reviewForm.valid)
     this.reviewValues = Object.entries(this.reviewForm.value).map((x) => x[1]);
@@ -53,20 +63,21 @@ export class RatingComponent implements OnInit {
   }
 
   onSubmit() {
-    this.inizializzaReview();
-
-
-      
-    this.ratingService.createRating(this.rat).subscribe({
-        next: () => {this.router.navigateByUrl('/game')},
-        error: () => {console.log("error")},
-    });
-      
-
-    this.reviewService.addReview(this.rev).subscribe({
-        next: () => {this.router.navigateByUrl('/game')},
-        error: () => {console.log("error")},
-    });
+    if( this.counter() != 0){
+      this.flagErroreMinWord=true;
+    }else{   
+      this.inizializzaReview();
+       
+      this.ratingService.createRating(this.rat).subscribe({
+          next: () => {this.router.navigateByUrl('/game')},
+          error: () => {},
+      });
+        
+      this.reviewService.addReview(this.rev).subscribe({
+          next: () => {this.router.navigateByUrl('/game')},
+          error: () => {},
+      });
+    }
   }
 }
 

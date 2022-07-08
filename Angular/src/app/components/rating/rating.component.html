@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center mt-5">
-    <div class = "card" style="width: 15rem;">
+    <div class = "card" style="width: 15rem; height: 21rem">
         <img
             [src] = "'https://image.tmdb.org/t/p/w440_and_h660_face' + movie.poster_path"
             class = "card-image"
@@ -23,11 +23,17 @@
                             <label class="m-0" for="review">Commento:</label>
                             <br>
                             <textarea 
+                            (keyup)="counter()"
                             cols="60" 
                             rows="5" 
                             id="review"
                             formControlName="review"
                             ></textarea> 
+                            <div class="error">
+                                <p *ngIf="flagErroreMinWord">Inserisci il rating e almeno 50 parole</p>
+                            </div>  
+                            <div><p>counter: {{ counter() }}</p></div>
+                            
                             <br>     
                             <button [disabled]="!reviewForm.valid" class="custom-btn" type="submit">INVIA</button>
                         </form>
