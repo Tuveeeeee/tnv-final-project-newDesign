@@ -41,8 +41,11 @@ export class AuthService {
     return of('login ok');
   }
 
-  register(registerData: Partial<RegisterDTO>) {
+  register(registerData: Partial<RegisterDTO>, fazione?: string) {
     // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
+    if(fazione!=null){
+      registerData.faction=fazione;
+    }
     return this.httpClient.post<Partial<RegisterDTO>>(`${this.springBaseUrl}/`, registerData);
   }
 
@@ -60,7 +63,7 @@ export class AuthService {
   }
 
   getAllUser(){
-    return this.httpClient.get<Partial<LoginDTO[]>>(`${this.springBaseUrl}/`);
+    return this.httpClient.get<User[]>(`${this.springBaseUrl}/`);
   }
 
   getUserById(id: number){

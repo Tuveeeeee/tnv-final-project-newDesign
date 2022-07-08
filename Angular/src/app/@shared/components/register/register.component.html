@@ -11,7 +11,7 @@
             <h3 class="mb-4">Registrati</h3>
           </div>
         </div>
-        <form #f="ngForm" (ngSubmit)="register(f)">
+        <form #f="ngForm" (ngSubmit)="controlloFazione(f)">
           <div class="form-group">
             <label class="label" for="name">Nome</label>
             <input
@@ -101,7 +101,7 @@
               >Campo obbligatorio</small
             >
 
-            <div class="form-check form-group">
+            <div *ngIf="!flagFactionError" class="form-check form-group">
               <input 
                 [ngModel]
                 class="form-check-input" 
@@ -117,7 +117,7 @@
                 Fazione Rossa
               </label>
             </div>
-            <div class="form-check form-group">
+            <div *ngIf="!flagFactionError" class="form-check form-group">
               <input 
                 class="form-check-input" 
                 [ngModel]
