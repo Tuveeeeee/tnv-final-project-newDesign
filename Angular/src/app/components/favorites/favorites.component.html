@@ -1,12 +1,17 @@
 <div class="row">
-    <tnv-game-item 
-        *ngFor="let movie of factionMovies.red"
+    <img src="../../../assets/videos/redBlue.gif">
+    <div class="col-6 red">
+        <tnv-game-item 
+            *ngFor="let movie of factionMovies.red"
+            [movie]="movie"
+        ></tnv-game-item>
+    </div>
+
+    <div class="col-6 blue">
+        <tnv-game-item 
+        *ngFor="let movie of factionMovies.blue"
         [movie]="movie"
-        class="col-12 col-sm-6 col-md-2 py-2 mx-3"
-    ></tnv-game-item>
-    <tnv-game-item 
-    *ngFor="let movie of factionMovies.blue"
-    [movie]="movie"
-    class="col-12 col-sm-6 col-md-2 py-2 mx-3"
-></tnv-game-item>
+        ></tnv-game-item>
+    </div>
+
 </div>

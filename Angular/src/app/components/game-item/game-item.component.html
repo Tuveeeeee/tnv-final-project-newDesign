@@ -6,8 +6,8 @@
     <div class = "card-body">
         <h5 class = "card-title" style="width: 100%; height: 5rem;">
             {{movie.title | titlecase}}
-            <td class="d-flex justify-content-center"><ngb-rating [(rate)]="starRating" [max]="5" ></ngb-rating></td>
+            <td class="d-flex justify-content-center"></td>
         </h5>
-        <a class="btn btn-primary w-75 h-25" routerLink="/rating/{{ movie.id }}" *ngIf="starRating > 0 ">RECENSISCI</a>
+        <a class="button" routerLink="/rating/{{ movie.id }}">Recensisci</a>
     </div>
 </div>

@@ -70,12 +70,12 @@ export class RatingComponent implements OnInit {
        
       this.ratingService.createRating(this.rat).subscribe({
           next: () => {this.router.navigateByUrl('/game')},
-          error: () => {},
+          error: (err) => {console.log(err)},
       });
         
       this.reviewService.addReview(this.rev).subscribe({
           next: () => {this.router.navigateByUrl('/game')},
-          error: () => {},
+          error: (err) => {console.log(err)},
       });
     }
   }

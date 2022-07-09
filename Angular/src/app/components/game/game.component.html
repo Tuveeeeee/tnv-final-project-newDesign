@@ -1,10 +1,15 @@
-<div class="row">
-        <tnv-game-item 
-            *ngFor="let movie of movies"
-            [movie]="movie"
-            class="col-12 col-sm-6 col-md-2 py-2 mx-3"
-        ></tnv-game-item>
-        <img class="col-1 arrow" src="https://cdn.iconscout.com/icon/free/png-256/right-arrow-1438234-1216195.png" (click)="randMovie()">
+<!--<img src="../../../assets/images/poltroneFrontali.jpg">-->
+<div class="container-fluid cont">
+    <img id="bg" src="../../../assets/images/poltroneFrontali.jpg">
+    <div class="row container-fluid">
+                    <tnv-game-item 
+                        *ngFor="let movie of movies"
+                        [movie]="movie"
+                        class="col-12 col-sm-6 col-md-2 py-2 mx-4"
+                    ></tnv-game-item>
+                    <img class="col-1 arrow mx-3" src="../../../assets/images/white-arrow.png" (click)="randMovie()">
+    </div>
 </div>
+
 
 

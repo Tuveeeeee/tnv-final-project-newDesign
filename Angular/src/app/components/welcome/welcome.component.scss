@@ -6,25 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-header
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-shadow: rgb(83, 83, 83) 3px  4px 5px;
-}
+
 .showcase
 {
   position: absolute;
@@ -40,10 +22,6 @@ header .logo
   z-index: 2;
   border: #03a9f4;
 }
-.showcase.active
-{
-  right: 300px;
-}
 
 .showcase img
 {
@@ -54,16 +32,12 @@ header .logo
   height: 100%;
   object-fit: cover;
 }
-.overlay
+
+.showcase.active
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #6394BF;
-  mix-blend-mode: overlay;
+  right: 300px;
 }
+
 .text
 {
   position: relative;
@@ -77,6 +51,18 @@ header .logo
   line-height: 1em;
   text-transform: uppercase;
   text-shadow: rgb(83, 83, 83) 3px  4px 5px;
+  position: relative;
+  left: -200%;
+  animation: anim forwards 3s;
+}
+
+@keyframes anim {
+	from{
+		left: -200%;
+	}
+	to{
+		left:0%;
+	}
 }
 .text h3
 {
@@ -86,7 +72,20 @@ header .logo
   line-height: 1em;
   text-transform: uppercase;
   text-shadow: rgb(83, 83, 83)ck 3px  4px 5px;
+  position: relative;
+  right: -200%;
+  animation: anim2 forwards 2s ease-in;
 }
+
+@keyframes anim2 {
+	from{
+		right: -200%;
+	}
+	to{
+		right:0%;
+	}
+}
+
 .text p
 {
   font-size: 1.1em;
@@ -95,51 +94,19 @@ header .logo
   font-weight: 400;
   max-width: 700px;
   text-shadow: rgb(83, 83, 83) 2px  2px 3px;
+  opacity: 0;
+  animation: anim3 forwards 3s ease-in;
 }
-// .text a
-// {
-//   display: inline-block;
-//   font-size: 1em;
-//   background: #fff;
-//   padding: 10px 30px;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   font-weight: 500;
-//   margin-top: 10px;
-//   color: #111;
-//   letter-spacing: 2px;
-//   transition: 0.2s;
-  
-// }
-// .text a:hover
-// {
-//   letter-spacing: 6px;
-// }
 
-// .fuller-button {
-//   display: inline-block;
-// 	color: rgba(255,255,255,1);
-// 	background: none;
-// 	border-radius: 0;
-// 	padding: 1.2em 5em;
-//   text-transform: uppercase;
-//   text-decoration: none;
-// 	letter-spacing: 2px;
-// 	font-size: 1em;
-//   font-weight: 400;
-// 	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-// 	margin: 1em;
-// &.white {
-//   box-shadow: inset 0 0 0.8em rgba(255,255,255,0.3), 0 0 0.8em rgba(255,255,255,0.3);
-//   border: #fff solid 2px;
-// }
-// &.white:hover {
-//   color: rgba(0,0,0,0.8);
-//   background-color: #fff;
-//   box-shadow: inset 0 0 0 rgba(255,255,255,0.3), 0 0 1.2em rgba(255,255,255,0.5);
-//   letter-spacing: 5px;
-// }
-// }
+@keyframes anim3 {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
 a.animated-button:link, a.animated-button:visited {
 	position: relative;
 	display: block;
@@ -230,4 +197,22 @@ a.animated-button.fill-left-right-right:before {
 	color: #000 !important;
 	background: #F7CA18;
 	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+
+.bottone{
+	position: absolute;
+	bottom: -200%;
+	animation: anim4 forwards 2.5s ease-in;
+}
+
+@keyframes anim4 {
+	0%{
+		bottom: -200%;
+	}
+	80%{
+		bottom: -30%;
+	}
+	100%{
+		bottom: -20%;
+	}
 }

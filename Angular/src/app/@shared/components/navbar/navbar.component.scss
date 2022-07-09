@@ -1,98 +1,79 @@
+#logo
+{
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: rgb(83, 83, 83) 3px  4px 5px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+h2
+{
+  font-size: 2.5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-shadow: rgb(83, 83, 83) 3px  4px 5px;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    width: 23rem;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.2rem;
+    text-shadow: rgb(83, 83, 83) 3px  4px 5px;
+    line-height: 1em;
+    opacity: 0.8;
+}
+
+a:hover{
+    opacity:1;
+}
+
+@keyframes anim5{
+    0%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+
+.nav-item{
+    list-style:none;
+}
+
 .navbar{
-    font-size: 30px;
-    color: #fff;
-    font-family: 'Amatic SC', cursive;
-    font-weight: 700;
-    padding-left: 15px;
-    margin-bottom: 25px;
+    justify-content: start;
 }
 
-.navbar img{
-    margin-right: -15px;
+.link-active{
+    opacity: 1;
 }
 
-.navbar li{
-    margin-right: 15px;
+.logoAnimation{
+    position: relative;
+    left: -200%;
+    animation: anim forwards 2s ease-in;
+    opacity: 0;
 }
 
-.navbar-toggler{
-    border: none;
-}
-
-span.navbar-toggler-icon{
-    width: 80px;
-    height: 60px;
-}
-
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus{
-    outline: none;
-    box-shadow: none;
-    border: 0;
-}
-
-@media only screen and (max-width: 991px) {
-    .navbar{
-      padding-top: 0px;
-      padding-left: 0px;
+@keyframes anim {
+    from{
+        left:-200%;
     }
-    .navbar img{
-        position: relative;
-        right: 60px;
-        width: 287px;
-        height: 155px;
-    }
-    span.navbar-toggler-icon{
-        width: 80px;
-        height: 60px;
-        margin-right: 10px;
+    to{
+        left:0%;
     }
 }
 
 
-@media only screen and (max-width: 760px) {
-    span.navbar-toggler-icon{
-        width: 65px;
-        height: 50px;
-        position: relative;
-        left: 15px;
-    }
-    .navbar img{
-        position: relative;
-        right: 50px;
-        width: 220px;
-        height: 120px;
-    }
-}
 
-@media only screen and (max-width: 598px) {
-    span.navbar-toggler-icon{
-        width: 50px;
-        height: 40px;
-        position: relative;
-        left: 20px;
-    }
-    .navbar img{
-        position: relative;
-        right: 38px;
-        width: 180px;
-        height: 100px;
-    }
-}
-
-@media only screen and (max-width: 460px) {
-    span.navbar-toggler-icon{
-        width: 40px;
-        height: 30px;
-        position: relative;
-        left: 25px;
-    }
-    .navbar img{
-        position: relative;
-        right: 29px;
-        width: 140px;
-        height: 80px;
-    }
-}

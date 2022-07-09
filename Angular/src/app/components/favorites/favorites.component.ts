@@ -43,6 +43,7 @@ export class FavoritesComponent implements OnInit {
           })}
         })        
     }
+    this.eliminaFazioneOpposta();
   }
 
   ngOnInit(): void {
@@ -51,5 +52,20 @@ export class FavoritesComponent implements OnInit {
       error: () => this.router.navigateByUrl('/welcome')
     })
   }
+
+  eliminaFazioneOpposta(){
+    if(this.authService.getCurrentUser().faction=='red'){
+      for(let index:number = 0; this.factionMovies.blue?.length; index++){
+             this.factionMovies.blue.pop();
+      }
+    }
+    else{
+        for(let index:number = 0; this.factionMovies.red?.length; index++){
+          this.factionMovies.red.pop();
+      }
+    }
+  }
 }
+
+
 

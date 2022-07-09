@@ -1,47 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <img class="navbar-brand" routerLink="/" src="../../../../assets/images/warrate-logo.png" width="185px" height="105px">
-  <button
-    class="navbar-toggler hidden-sm-up mx-3"
-    type="button"
-    (click)="isNavbarCollapsed = !isNavbarCollapsed"
-    data-target="#navbarsDefault"
-    aria-controls="navbarsDefault"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div
-    [ngbCollapse]="isNavbarCollapsed"
-    class="collapse navbar-collapse"
-    id="navbarsDefault"
-  >
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/welcome" routerLinkActive="active"
-          >Home</a
-        >
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/game" routerLinkActive="active"
-          >Movies</a
-        >
-
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/favorites"
-          >Preferiti</a
-        >
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/profile" routerLinkActive="active"
-          >Profilo</a
-        >
-      </li>
+<nav class="px-5 pt-5 mb-5 fixed-top navbar">
+    <h2 id="logo" class="text-white" routerLink="/welcome">WarRrate!</h2>
+    <ul class="nav-list mx-5">
+          <li class="nav-item">
+            <a routerLink="/game" routerLinkActive="link-Active">Film</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/favorites" routerLinkActive="link-Active">Recensiti</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/profile" routerLinkActive="link-Active">Profilo</a>
+          </li>
     </ul>
-    
-  </div>
-  
+
 </nav>
 
 
