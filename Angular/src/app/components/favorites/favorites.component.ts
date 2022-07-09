@@ -49,7 +49,7 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(): void {
     this.ratingService.getAllRating().subscribe({
       next: res =>{ this.getMovies(res)},
-      error: () => this.router.navigateByUrl('/welcome')
+     // error: () => this.router.navigateByUrl('/welcome')
     })
   }
 

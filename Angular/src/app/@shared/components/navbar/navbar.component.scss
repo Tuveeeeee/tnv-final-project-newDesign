@@ -2,9 +2,22 @@
 {
   text-transform: uppercase;
   cursor: pointer;
-  text-shadow: rgb(83, 83, 83) 3px  4px 5px;
   padding-right: 0px;
   margin-right: 0px;
+}
+
+.navbarShow{
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    0%{
+        position:absolute;
+        top: 0%;
+    }
+    100%{
+        top: -50%;
+    }
 }
 
 h2
@@ -13,7 +26,6 @@ h2
   font-weight: 800;
   line-height: 1em;
   text-transform: uppercase;
-  text-shadow: rgb(83, 83, 83) 3px  4px 5px;
 }
 
 .nav-list{
@@ -29,7 +41,6 @@ a{
     text-decoration: none;
     color:#fff;
     font-size: 1.2rem;
-    text-shadow: rgb(83, 83, 83) 3px  4px 5px;
     line-height: 1em;
     opacity: 0.8;
 }
@@ -75,5 +86,11 @@ a:hover{
     }
 }
 
+.navbarShadowBlue a, .navbarShadowBlue h2,  .navbarShadowBlue #logo{
+    text-shadow: rgb(45, 29, 194) 3px  4px 5px;
+}
 
+.navbarShadowRed a, .navbarShadowBlue h2, .navbarShadowBlue #logo{
+    text-shadow: rgb(194, 29, 29) 3px  4px 5px;
+}
 
