@@ -1,3 +1,7 @@
+<div>
+    <img src="../../../assets/images/poltroneFrontali.jpg" class="sfondo" alt="Norway">
+    <!-- <img src="../../../assets/images/poltroneFrontali.jpg" width="100%" height="100%"> -->
+
 <div class="container-fluid overflow-hidden d-flex justify-content-center mt-5 contenitore">
     <div class = "card" style="width: 15rem; height: 21rem">
         <img
@@ -12,7 +16,7 @@
                 <ul>
                     <li>
                         <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
-                            <label class="m-0 pt-2" for="rating">Ratings:</label>
+                            <label class="stelle" for="">Ratings:</label>
                             <td class="px-3 pb-2"><ngb-rating 
                                 [rate]="0" 
                                 [max]="5" 
@@ -20,7 +24,7 @@
                                 formControlName="rating"
                                 >
                             </ngb-rating></td>
-                            <label class="m-0" for="review">Commento:</label>
+                            <label class="commento" for="review">Commento:</label>
                             <br>
                             <textarea 
                             (keyup)="counter()"
@@ -37,4 +41,5 @@
             </li>
         </ul>
     </div>
+</div>
 </div>
