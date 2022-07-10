@@ -21,6 +21,7 @@ import { GameItemComponent } from './components/game-item/game-item.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { CardSlideComponent } from './card-slide/card-slide.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     GameItemComponent,
     RatingComponent,
     FavoritesComponent,
+    CardSlideComponent,
    
   ],
   imports: [
@@ -48,7 +50,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     HttpClientModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
