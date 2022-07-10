@@ -28,7 +28,6 @@ export class RatingComponent implements OnInit {
   movie: Partial<Movie> = {};
   id: string='';
   reviewValues: any;
-  flagErroreMinWord: boolean=false;
   counterWord: number=50;
 
   constructor(private movieService: MovieService, private route: ActivatedRoute, private router: Router, private reviewService: ReviewService, private ratingService: RatingService, private authService: AuthService ) { }
@@ -64,7 +63,7 @@ export class RatingComponent implements OnInit {
 
   onSubmit() {
     if( this.counter() != 0){
-      this.flagErroreMinWord=true;
+      console.log("assicurati di aver dato un voto e aver scritto almeno 50 parole");
     }else{   
       this.inizializzaReview();
        
