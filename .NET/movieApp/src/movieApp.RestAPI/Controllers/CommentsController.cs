@@ -94,6 +94,7 @@ namespace movieApp.RestAPI.Controllers
             }
         }
 
+        //metodo per la creazione di una recensione 
         [EnableCors("Policy1")]
         [HttpPost]
         public ActionResult<CommentContract> CreateNewComment([FromBody] Comments newComment)

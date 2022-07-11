@@ -21,13 +21,8 @@ public class UserController {
     }
 
     //CRUD operations (Create Read Update Delete)
-
-    @PostMapping("/register/}")
-    public User register(@RequestBody User newUser){
-        return userService.register(newUser);
-    }
-
    
+    //metodo per creare un nuovo utente, utilizzato per la registrazione
     @PostMapping("/")
     public ResponseEntity<User> addUser(@RequestBody User user) {
         User newUser = userService.addUser(user.getName(), user.getSurname(), user.getUsername(), user.getPassword(), user.getFaction());
@@ -38,14 +33,13 @@ public class UserController {
     public User getUserById(@PathVariable("id") int identificativo) {
         return userService.getUser(identificativo);
     }  
-/* */
-    //@GetMapping("/username/{username}/password/{password}")
 
     @GetMapping("/username/{username}")
     public Iterable<User> getUserByUsernameContains(@PathVariable("username") String username) {
         return userService.getUserByUsernameContains(username);
     }
 
+    //metodo che restituisce l'utente tramite username e password, utilizzato per la login 
     @GetMapping("/username/{username}/password/{password}")
     public User getUserByUsernameAndPassword(@PathVariable("username") String username, @PathVariable ("password") String password){
         return userService.getUserByUsernameAndPassword(username, password);
