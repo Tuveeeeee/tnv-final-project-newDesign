@@ -26,15 +26,15 @@ export class FavoritesComponent implements OnInit {
   
   constructor(private movieService: MovieService, private authService: AuthService, private ratingService: RatingService, private router: Router) { }
 
+  //funzione che salva i film recensiti della stessa squadra dell'utente corrente
   getMovies(ratings: Rating[]){
     for(let rating of ratings){
       this.authService.getUserById(rating.userId).subscribe({
         next: user => {
           this.movieService.getMovie(rating.movieId).subscribe({
             next: (res: Partial<Movie>) => {
-                this.movies.push(res);
-                if(this.authService.getCurrentUser().faction != user.faction){
-                  this.movies.pop();
+                if(this.authService.getCurrentUser().faction == user.faction){
+                  this.movies.push(res);
                 }
           },
             error: () => {this.router.navigateByUrl('/welcome')},
@@ -46,14 +46,13 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(): void {
     this.ratingService.getAllRating().subscribe({
       next: res =>{ this.getMovies(res)},
-     // error: () => this.router.navigateByUrl('/welcome')
+      error: () => this.router.navigateByUrl('/welcome')
     })
   }
 
-
-
+  //funzione per cambiare movie che si sta visualizzando
   cambiaMovie(index: number){
-    if(index-1 == this.movies.length){
+    if(index == this.movies.length-1){
       this.indexMovie=0;
     }
     else{

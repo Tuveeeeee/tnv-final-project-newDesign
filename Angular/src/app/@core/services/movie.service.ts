@@ -20,7 +20,6 @@ export class MovieService {
   }
 
   getRandomMovies(index: number) {
-    // Per determinare questo valore facciamo eventualmente una query su movies/latest per avere l'id dell'ultimo Film inserito su TMDB
     const latestId = 30000;
     const randomId = Math.round(Math.random() * latestId);
 
@@ -29,7 +28,6 @@ export class MovieService {
         `https://api.themoviedb.org/3/movie/${randomId}?api_key=${this.api_key}`
       )
       .subscribe({
-        // Qui non usate any ovviamente, ma create l'interfaccia typescript per la response
         next: (res: Partial<Movie>) => {
           console.log('ID trovato', randomId);
           if (res.poster_path) {

@@ -16,24 +16,16 @@ export class AuthService {
   constructor(private router: Router, private httpClient: HttpClient) {}
 
   login(loginData: LoginDTO) {
-    // TODO Chiamare il servizio per l'autenticazione e salvare l'utente corrente nel localStorage
     const httpOptions = {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
           'Authorization': 'Basic ' + btoa(loginData.username+":"+loginData.password)
         })
       };
-      
-      /*const response: User = {
-        name: "Paolino",
-        surname: "Paperino",
-        username: `${loginData.username}`
-      };
-    
-    localStorage.setItem("user", JSON.stringify(response));*/
+
     
     return this.httpClient.get<Partial<LoginDTO>>(`${this.springBaseUrl}/username/${loginData.username}/password/${loginData.password}`, httpOptions);
-    //return of('login ok');
+
   }
 
   saveUser(userData: Partial<User>){
@@ -42,7 +34,6 @@ export class AuthService {
   }
 
   register(registerData: Partial<RegisterDTO>, fazione?: string) {
-    // TODO Chiamare il servizio per la registrazione e redirigere l'utente alla root per il login
     if(fazione!=null){
       registerData.faction=fazione;
     }

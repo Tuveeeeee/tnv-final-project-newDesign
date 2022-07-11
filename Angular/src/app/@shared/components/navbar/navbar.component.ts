@@ -29,6 +29,8 @@ export class NavbarComponent implements OnInit {
     this.prevScrollPosition=document.documentElement.scrollTop;
   }
 
+
+  //funzione per colorare le ombre a seconda della fazione
   shadowController(){
     if(this.authService.getCurrentUser().faction=='red'){
       this.navBarShadowRedController=true;
@@ -37,6 +39,7 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  //funzione creata per nascondere e mostrare la navbar tramite scroll
   @HostListener("document:scroll")
   scrollFunction(){
     this.scrollPosition=document.documentElement.scrollTop;

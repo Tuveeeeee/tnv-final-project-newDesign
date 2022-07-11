@@ -15,6 +15,7 @@ export class WelcomeComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
+  //funzione che genera utenti casualmente (fatta per testare)
   generaUtenti(faction: string){
     for(let index=0;index<100;index++){
       this.user.faction=faction;

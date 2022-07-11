@@ -26,6 +26,7 @@ export class ProfileComponent implements OnInit {
     this.cardColor();
   }
 
+  //funziona per vedere il numero di film recensiti dell'utente corrente
   trovaTotaleRecensiti(userId: number | undefined){
     this.ratingService.getAllRating().subscribe({
       next: res => {
@@ -38,6 +39,7 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  //funzione che cambia il colore della card a seconda della fazione di una squadra
   cardColor(){
     if(this.currentUser.faction=='red'){
       this.cardRedController=true;

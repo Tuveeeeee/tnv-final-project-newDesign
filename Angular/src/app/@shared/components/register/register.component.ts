@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
   difference: number=0;
 
 
+  //funzione che salva il numero di utenti per fazione
   totalFaction(users: User[]){
     for(let user of users){
       if(user.faction=='red'){
@@ -27,6 +28,7 @@ export class RegisterComponent implements OnInit {
     }
   }
   
+  //funzione che non permette di scegliere una squadra che super l'altrà del 10%
   controlloFazione(form: NgForm){
       if(this.totalFactionRed > this.totalFactionBlue + this.totalFactionBlue/10){
         this.register(form, 'blue');
