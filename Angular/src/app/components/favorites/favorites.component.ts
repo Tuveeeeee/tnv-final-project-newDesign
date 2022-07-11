@@ -6,7 +6,6 @@ import { Rating } from 'src/app/models/rating';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { Movie } from 'src/app/models/movie';
-import { FactionMovies } from 'src/app/models/movie';
 import { switchMap } from 'rxjs';
 
 
@@ -18,10 +17,12 @@ import { switchMap } from 'rxjs';
 
 export class FavoritesComponent implements OnInit {
 
+  indexMovie: number=0;
+  movie: Partial<Movie>={};
   user:Partial<User>={};
   ratings: Rating[]=[];
-  factionMovies: Partial<FactionMovies>={red: [], blue: []};
   movies: Partial<Movie>[]=[];
+  
   
   constructor(private movieService: MovieService, private authService: AuthService, private ratingService: RatingService, private router: Router) { }
 
@@ -31,19 +32,15 @@ export class FavoritesComponent implements OnInit {
         next: user => {
           this.movieService.getMovie(rating.movieId).subscribe({
             next: (res: Partial<Movie>) => {
-              console.log(user.faction);
-              if(user.faction =='red'){
-                this.factionMovies.red?.push(res);
-              }else{
-                this.factionMovies.blue?.push(res);
-              }
-  
+                this.movies.push(res);
+                if(this.authService.getCurrentUser().faction != user.faction){
+                  this.movies.pop();
+                }
           },
             error: () => {this.router.navigateByUrl('/welcome')},
           })}
         })        
     }
-    this.eliminaFazioneOpposta();
   }
 
   ngOnInit(): void {
@@ -53,16 +50,14 @@ export class FavoritesComponent implements OnInit {
     })
   }
 
-  eliminaFazioneOpposta(){
-    if(this.authService.getCurrentUser().faction=='red'){
-      for(let index:number = 0; this.factionMovies.blue?.length; index++){
-             this.factionMovies.blue.pop();
-      }
+
+
+  cambiaMovie(index: number){
+    if(index-1 == this.movies.length){
+      this.indexMovie=0;
     }
     else{
-        for(let index:number = 0; this.factionMovies.red?.length; index++){
-          this.factionMovies.red.pop();
-      }
+      this.indexMovie++;
     }
   }
 }
