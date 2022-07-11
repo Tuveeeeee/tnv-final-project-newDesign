@@ -16,3 +16,6 @@
 .gitignore
 .NET/movieApp/src/movieApp.RestAPI/obj/Debug/net6.0/movieApp.RestAPI.assets.cache
 .NET/movieApp/src/movieApp.Ef/obj/Debug/net6.0/movieApp.Ef.assets.cache
+.NET/movieApp/src/movieApp.RestAPI/bin/Debug/net6.0/movieApp.Core.dll
+.NET/movieApp/src/movieApp.RestAPI/bin/Debug/net6.0/movieApp.Ef.dll
+.NET/movieApp/src/movieApp.RestAPI/bin/Debug/net6.0/movieApp.RestAPI.dll
