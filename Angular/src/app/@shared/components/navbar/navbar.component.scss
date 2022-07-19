@@ -4,4 +4,13 @@
 .nvbr__link{list-style: none;display: flex;color: #fff;}
 .nvbr__link__item{margin: 0px 40px;}
 .nvbr__link__item a{color: #fff;text-decoration: none;transition: all .5s;}
-.active-link{text-decoration: underline;}
+.active-link{animation: underlineAnim forwards .5s ease-in;}
+
+@keyframes underlineAnim {
+    0%{
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+    }
+    100%{
+        border-bottom: 1px solid #eee;
+    }
+}
