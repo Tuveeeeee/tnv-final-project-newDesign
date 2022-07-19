@@ -1,47 +1,30 @@
-<!-- <h2>Profilo Utente</h2>
-<div class="row">
-  <div>
-    <span>Nome</span>: <span class="profile-data">{{ currentUser.name }}</span
-    ><br />
-    <span>Cognome</span>:
-    <span class="profile-data">{{ currentUser.surname }}</span
-    ><br />
-    <span>Username</span>:
-    <span class="profile-data">{{ currentUser.username }}</span
-    ><br />
-    <span>Id</span>:
-    <span class="profile-data">{{ currentUser.id }}</span
-    >
-  </div>
-  <tnv-logout class="mt-3"></tnv-logout>
-</div> -->
-
-<img src="../../../assets/images/poltroneFrontali.jpg" id="bg">
-<div class="card" [class.cardBlue]="cardBlueController" [class.cardRed]="cardRedController">
-  <div class="ds-top"></div>
-  <div class="avatar-holder">
-    <img src="{{ immagineProfilo }}">
-  </div>
-  <div class="name">
-    <a>{{ currentUser.name }}</a>
-    <br>
-    <a>@{{ currentUser.username }}</a>
-  </div>
-  <div class="ds-info d-flex justify-content-center">
-    <div class="ds pens">
-      <h6 >Fazione<i class="fas fa-edit"></i></h6>
-      <p>{{ currentUser.faction }}</p>
+<div class="profile">
+  <div class="profile__card" [class.cardBlue]="cardBlueController" [class.cardRed]="cardRedController">
+    <div class="ds-top"></div>
+    <div class="avatar-holder">
+      <img src="{{ immagineProfilo }}">
     </div>
-  </div>
-  <div class="ds-skill">
-    <h6>Recensiti <i class="fa fa-code" aria-hidden="true"></i></h6>
-    <div class="skill html">
-      <div class="bar bar-html">
-        <p>{{ totaleRecensiti }}</p>
+    <div class="name">
+      <a>{{ currentUser.name }}</a>
+      <br>
+      <a>@{{ currentUser.username }}</a>
+    </div>
+    <div class="ds-info d-flex justify-content-center">
+      <div class="ds pens">
+        <h6 >Fazione<i class="fas fa-edit"></i></h6>
+        <p>{{ currentUser.faction }}</p>
       </div>
     </div>
-    <tnv-logout class="bottone"></tnv-logout>
+    <div class="ds-skill">
+      <h6>Recensiti <i class="fa fa-code" aria-hidden="true"></i></h6>
+      <div class="skill html">
+        <div class="bar bar-html">
+          <p>{{ totaleRecensiti }}</p>
+        </div>
+      </div>
+      <tnv-logout class="bottone"></tnv-logout>
+    </div>
+        
   </div>
-      
 </div>
  

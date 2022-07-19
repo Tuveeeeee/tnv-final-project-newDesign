@@ -12,41 +12,11 @@ h2{
     margin-left: 8rem;
 }
 
-#bg {
-    position: absolute;
-    left:0;
-    top:0;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-@import url('https://fonts.googleapis.com/css?family=Krub:400,700');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  background: #202020;
-  font-family: 'Krub', sans-serif;
-}
-
-.card {
-  position:absolute;
-  top: 20%;
-  right: 0;
-  bottom: 0;
-  left: 3%;
-  width: 17rem;
-  height: 30rem;
+.profile{position: relative;width: 100vw;height: 100vh;padding: 30px 120px;}
+.profile__card {
+  position:relative;
+  width: 15rem;
+  height: 25rem;
   border-radius: 10px;
   box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
   background: #151515;
@@ -247,16 +217,6 @@ body {
   100% {width: 95%;}
 }
 
-@keyframes cssSkill {
-  0% {width: 0;}
-  100% {width: 90%;}
-}
-
-@keyframes jsSkill {
-  0% {width: 0;}
-  100% {width: 75%;}
-}
-
 @keyframes mvBottom {
   0% {bottom: -150px;}
   100% {bottom: 10px;}
@@ -276,7 +236,6 @@ body {
   color: white;
 }
 
-
 .cardBlue{
   opacity: 0.9;
   h6{
@@ -295,6 +254,7 @@ body {
     background-color: blue;
   }
   .ds-top{
+    opacity: 0.1;
     background-color: blue;
   }
   .following{

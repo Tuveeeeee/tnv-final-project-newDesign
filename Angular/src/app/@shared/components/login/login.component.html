@@ -1,15 +1,6 @@
-<div
-  class="d-flex align-items-center justify-content-center"
-  style="height: 100vh;"
->
-  <div class="login-card">
-    <div class="wrap d-md-flex">
-      <div class="col-12 col-md-6 p-4 p-md-5">
-        <div class="d-flex">
-          <div class="w-100">
-            <h3 class="mb-4">Accedi</h3>
-          </div>
-        </div>
+<div class="login d-flex align-items-center justify-content-center">
+  <div class="login-card wrap">
+        <h3 class="mb-4 text-white">Accedi</h3>
         <form #f="ngForm" (ngSubmit)="login(f)">
           <div class="form-group">
             <label class="label" for="username">Username</label>
@@ -52,7 +43,7 @@
           <div class="form-group">
             <button
               type="submit"
-              class="form-control sh btn btn-primary rounded submit px-3 mt-2"
+              class="form-control button__primary submit mt-2"
             >
               Login
             </button>
@@ -61,12 +52,9 @@
             </div>
           </div>
         </form>
-        <p class="text-center mt-3">
+        <p class="text-center mt-3 text-white">
           Non sei iscritto?
-          <a data-toggle="tab" routerLink="/register">Registrati</a>
+          <a data-toggle="tab" routerLink="/register" class="text-white">Registrati</a>
         </p>
       </div>
-      <div class="img col-12 col-md-6"></div>
     </div>
-  </div>
-</div>

@@ -1,8 +1,4 @@
-<div>
-    <img src="../../../assets/images/poltroneFrontali.jpg" class="sfondo" width="100%" height="100%">
-    <!-- <img src="../../../assets/images/poltroneFrontali.jpg" width="100%" height="100%"> -->
-
-<div class="container-fluid overflow-hidden d-flex justify-content-center mt-5 contenitore">
+<div class="container-fluid overflow-hidden d-flex justify-content-center pt-5">
     <div class = "card" style="width: 15rem; height: 21rem">
         <img
             [src] = "'https://image.tmdb.org/t/p/w440_and_h660_face' + movie.poster_path"
@@ -28,13 +24,13 @@
                             <br>
                             <textarea 
                             (keyup)="counter()"
-                            cols="60" 
+                            cols="50" 
                             rows="5" 
                             id="review"
                             formControlName="review"
                             ></textarea> 
                             <div><p>counter: {{ counter() }}</p></div>
-                            <button [disabled]="!reviewForm.valid" class="custom-btn" type="submit">INVIA</button>
+                            <button [disabled]="!reviewForm.valid" class="button__primary" type="submit">INVIA</button>
                         </form>
                     </li>
                 </ul>
@@ -42,4 +38,4 @@
         </ul>
     </div>
 </div>
-</div>
+

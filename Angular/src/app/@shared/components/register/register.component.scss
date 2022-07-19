@@ -1,31 +1,4 @@
-.register-card {
-  width: 800px;
-}
+button{padding: 5px 0;}
 
-.img {
-  background-image: url("/assets/images/reg-img.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.wrap {
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-button{
-  background-color: #202026;
-  color: #fff;
-}
-  
-
-
-@media only screen and (max-width: 768px) {
-  .register-card {
-    width: 400px;
-  }
-  .img {
-    height: 200px;
-  }
-}
+.register{position:relative;width: 100vw;height: 100vh;}
+.register-card{padding: 30px 8%;height: 100vh;display: flex;flex-direction: column;justify-content: center;}

@@ -1,11 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 $primary: #202026;
 $secondary: #d977a5;
 //$dark-grey: #202026;
-$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-sans-serif: 'Red Hat Display', sans-serif;
 
 
 /* Importing Bootstrap SCSS file. */
@@ -23,6 +21,7 @@ label {
   text-transform: uppercase;
   font-size: small;
   font-weight: bold;
+  color: #fff;
 }
 
 ngb-rating {
@@ -31,29 +30,26 @@ ngb-rating {
 
 .wrap{
   animation: animate 7s linear infinite;
+  border-bottom: hidden;
+  border-top: hidden;
 }
 
 @keyframes animate{
   0%
   {
-    box-shadow: 0 0 10px $primary;
+    box-shadow: 0 0 10px #eee;
   }
   50%
   {
-    box-shadow: 0 0 20px #EFF5F4,
-    0 0 40px #EFF5F4,
-    0 0 80px #EFF5F4
+    box-shadow: 0 0 15px #EFF5F4,
+    0 0 20px #EFF5F4,
+    0 0 40px #EFF5F4
   }
 
   100%
   {
-    box-shadow: 0 0 10px $primary,
+    box-shadow: 0 0 10px #eee,
   }
-}
-
-.sh:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 10px rgba(145, 92, 182, .4);
 }
 
 .error{
@@ -64,3 +60,9 @@ ngb-rating {
   font-size: small;
   text-decoration: underline;
 }
+
+.button__primary{background: transparent;box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.5);border-radius: 4px;border: 1px solid #fff;color: #fff;padding: 3px 20px;transition: all .3s;}
+.button__primary:hover{transform: scale(1.1);}
+.description{width: 60%;line-height: 27px;}
+.title{font-weight: 700;}
+

@@ -1,28 +1,8 @@
-.login-card {
-  width: 800px;
-}
+.login{position: relative;width: 100vw;height: 100vh;border: 1px solid red;}
+.login-card{padding: 30px 8%;height: 100vh;display: flex;flex-direction: column;justify-content: center;}
 
-.img {
-  background-image: url('../../../../assets/images/login-screen.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+button{padding: 5px 0;}
 
-.wrap {
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-}
 
-@media only screen and (max-width: 768px){
-
-.login-card {
-  width: 400px;
-}
-  .img {
-    height: 200px;
-  }
-}
 
 

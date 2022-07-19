@@ -1,13 +1,12 @@
 <!--<img src="../../../assets/images/poltroneFrontali.jpg">-->
-<div class="container-fluid cont">
-    <img id="bg" src="../../../assets/images/poltroneFrontali.jpg">
-    <div class="row container-fluid">
-                    <tnv-game-item 
-                        *ngFor="let movie of movies"
-                        [movie]="movie"
-                        class="col-12 col-sm-6 col-md-2 py-2 mx-4"
-                    ></tnv-game-item>
-                    <img class="col-1 arrow mx-3" src="../../../assets/images/white-arrow.png" (click)="randMovie()">
+<div class="movies">
+    <div class="movies__cardBox">
+        <tnv-game-item 
+            class="movies__cardBox__card"
+            *ngFor="let movie of movies"
+            [movie]="movie"
+        ></tnv-game-item>
+        <img src="../../../assets/images/white-arrow.png" class="movies__card__arrow" (click)="randMovie()">
     </div>
 </div>
 

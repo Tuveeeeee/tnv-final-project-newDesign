@@ -1,38 +1,9 @@
-h2{
-    font-family: 'Amatic SC', cursive;
-    font-weight: 700;
-    font-size: 3vw;
-    color: #fff;
-}
 .card{
     border-radius: 15px;
     border: 1px solid white;
     overflow: hidden;
 }
-.li{
-    color: #fff;
-}
 
-.body{
-    
-}
-.stelle{
-    color:#fff ;
-}
-.commento{
-    color: #fff;
-}
-
-.sfondo{
-    background-image: url('../../../assets/images/poltroneFrontali.jpg');
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
 p{
     text-transform: uppercase;
     font-size: small;
@@ -49,51 +20,7 @@ ngb-rating{
     color: #fff;
 }
 
-button {
-    outline: none;
-    width: 110px;
-    height: 40px;
-    border: 1px solid white;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    background: #202026;
-    border-radius: 3px;
-    color: #fff;
-    z-index: 1;
-}
-button:after {
-   position: absolute;
-   content: "";
-   width: 100%;
-   height: 0;
-   bottom: 0;
-   left: 0;
-   z-index: -1;
-    background: #fff;
-   transition: all 0.3s ease;
- }
-button:hover {
-   color: #000;
-}
-button:hover:after {
-   top: 0;
-   height: 100%;
-}
-button:active {
-   top: 2px;
-}
-
-h2, .card{
-    margin-top: 8rem;
-    color: white;
-}
-
-.contenitore{
-    overflow: hidden;
-}
+h2, .card{color: white;}
 
 
 
