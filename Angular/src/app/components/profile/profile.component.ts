@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/@core/services/auth.service';
 import { User } from 'src/app/models/user';
 import { faker } from '@faker-js/faker';
 import { RatingService } from 'src/app/@core/services/rating.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tnv-profile',
@@ -17,8 +18,13 @@ export class ProfileComponent implements OnInit {
   cardRedController: boolean=false;
   cardBlueController: boolean= false;
 
-  constructor(private authService: AuthService, private ratingService: RatingService) { }
+  constructor(private authService: AuthService, private ratingService: RatingService, private router: Router) { }
 
+  removeUser(){
+    localStorage.clear();
+    this.router.navigateByUrl('/login');
+
+  }
   ngOnInit(): void {
     this.currentUser = this.authService.getCurrentUser();
     this.immagineProfilo = faker.image.cats();
